@@ -25,6 +25,12 @@ var swiper = new Swiper('.destinations-swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: 'true',
+    type: 'progressbar',
+  },
+
   autoplay: {
     delay: 3000,
     disableOnInteraction: true,
@@ -45,11 +51,8 @@ var swiper = new Swiper('.destinations-swiper', {
 });
 
 /* Destinations */
-/* const destinationSlides = document.querySelectorAll('.destination-slide');
+const destinationSlides = document.querySelectorAll('.destination-slide');
 destinationSlides.forEach(destinationSlide => {
-  destinationSlide.addEventListener('mouseover', e => {
-    console.log(e.target.querySelector('.destination-title'));
-  });
+  destinationSlide.addEventListener('mouseover', e => {});
   destinationSlide.addEventListener('mouseout', e => {});
 });
- */
