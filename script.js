@@ -20,13 +20,15 @@ window.addEventListener('scroll', function () {
 
 var swiper = new Swiper('.destinations-swiper', {
   speed: 800,
-  spaceBetween: 10,
+  spaceBetween: 20,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   autoplay: {
     delay: 3000,
+    disableOnInteraction: true,
+    disableOnClick: true,
   },
   loop: true,
   breakpoints: {
@@ -41,3 +43,13 @@ var swiper = new Swiper('.destinations-swiper', {
     },
   },
 });
+
+/* Destinations */
+/* const destinationSlides = document.querySelectorAll('.destination-slide');
+destinationSlides.forEach(destinationSlide => {
+  destinationSlide.addEventListener('mouseover', e => {
+    console.log(e.target.querySelector('.destination-title'));
+  });
+  destinationSlide.addEventListener('mouseout', e => {});
+});
+ */
