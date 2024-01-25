@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -111,29 +112,45 @@
     <br />
 
     <!-- Destinations -->
-    <section class="destinations pb-4">
+    <section class="destinations pt-4 pb-4">
       <h1 class="section-title">Popular Destinations</h1>
       <!-- Slider main container -->
       <div class="swiper destinations-swiper">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper destinations-wrapper">
           <!-- Slides -->
           <div class="swiper-slide destination-slide">
-            <img src="./assets/thajwas.jpg" alt="" />
+            <div class="destination-img-container">
+              <img src="./assets/thajwas.jpg" alt="Thajwas Glacier" />
+            </div>
+            <h3 class="destination-title test-effect">Thajwas Glacier</h3>
           </div>
           <div class="swiper-slide destination-slide">
-            <img src="./assets/thajwas.jpg" alt="" />
+            <div class="destination-img-container">
+              <img src="./assets/dal-lake.jpg" alt="Dal Lake" />
+            </div>
+            <h3 class="destination-title">Dal Lake</h3>
           </div>
           <div class="swiper-slide destination-slide">
-            <img src="./assets/thajwas.jpg" alt="" />
+            <div class="destination-img-container">
+              <img src="./assets/gulmarg.jpg" alt="Gulmarg" />
+            </div>
+            <h3 class="destination-title">Gulmarg</h3>
           </div>
           <div class="swiper-slide destination-slide">
-            <img src="./assets/thajwas.jpg" alt="" />
+            <div class="destination-img-container">
+              <img src="./assets/chenab.jpg" alt="Chenab Valley" />
+            </div>
+            <h3 class="destination-title">Chenab Valley</h3>
           </div>
           <div class="swiper-slide destination-slide">
-            <img src="./assets/thajwas.jpg" alt="" />
+            <div class="destination-img-container">
+              <img src="./assets/pahalgam.jpg" alt="Pahalgam" />
+            </div>
+            <h3 class="destination-title">Pahalgam</h3>
           </div>
         </div>
+        <div class="swiper-pagination destination-pagination"></div>
       </div>
     </section>
     <br />
@@ -152,5 +169,4 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </html>
