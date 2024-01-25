@@ -32,9 +32,8 @@ var swiper = new Swiper('.destinations-swiper', {
   },
 
   autoplay: {
-    delay: 3000,
+    delay: 2000,
     disableOnInteraction: true,
-    disableOnClick: true,
   },
   loop: true,
   breakpoints: {
@@ -49,10 +48,3 @@ var swiper = new Swiper('.destinations-swiper', {
     },
   },
 });
-
-/* Destinations */
-/* const destinationSlides = document.querySelectorAll('.destination-slide');
-destinationSlides.forEach(destinationSlide => {
-  destinationSlide.addEventListener('mouseover', e => {});
-  destinationSlide.addEventListener('mouseout', e => {});
-}); */

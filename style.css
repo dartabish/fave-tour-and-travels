@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@font-face {
+  font-family: 'Ruthie';
+  src: url('./assets/Ruthie-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sketsa';
+  src: url('./Sketsaramadhan-nRLAO.otf') format('opentype');
+}
 
 :root {
   --primary-color: #669ccb;
@@ -35,6 +43,10 @@ body {
   /* background-color: var(--primary-color); */
 }
 
+.navbar-brand {
+  font-family: 'Sketsa', sans-serif;
+}
+
 .navbar-toggler {
   border: none !important;
 }
@@ -51,9 +63,6 @@ body {
   font-size: 1.25rem;
 }
 
-.navbar-brand {
-  font-style: italic;
-}
 .offcanvas {
   background-color: darkslategrey !important;
   width: 60vw !important;
@@ -153,6 +162,7 @@ video {
 .destination-slide {
   position: relative;
   padding-top: 4px;
+  font-family: 'SketsaRamadan';
 }
 
 .destination-img-container {
@@ -166,10 +176,13 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
   padding: 10px;
   text-align: center;
   width: 100%;
+  font-family: 'Ruthie', sans-serif;
+  font-family: 'Sketsa', sans-serif;
+  font-size: 50px;
 }
 
 .destination-slide img {
@@ -438,7 +451,7 @@ video {
   right: 0px;
 }
 .content-wrapper-testmonial {
-  height: 210px;
+  height: 225px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -455,13 +468,16 @@ video {
   font-size: 12px;
   color: #fdc400;
 }
+
 .slick-dots {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   gap: 15px;
+  margin-top: 1rem;
 }
+
 .slick-dots li button {
   color: transparent;
   border-radius: 50%;
@@ -471,9 +487,11 @@ video {
   background-color: #aadcf0;
   padding: 0;
 }
+
 .slick-dots .slick-active button {
   background-color: #025a9a;
 }
+
 .slick-arrow {
   position: absolute;
   top: 50%;
