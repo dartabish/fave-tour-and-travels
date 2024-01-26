@@ -15,6 +15,8 @@
   --text-dark: #282d31;
   --text-light: #767268;
   --extra-light: #f3f4f6;
+  --bg-accent: rgba(23, 187, 187, 0.169);
+  --bg-primary: darkslategray;
 }
 
 * {
@@ -64,7 +66,7 @@ body {
 }
 
 .offcanvas {
-  background-color: darkslategrey !important;
+  background-color: var(--bg-primary) !important;
   width: 60vw !important;
 }
 
@@ -135,7 +137,7 @@ video {
   outline: none;
   border: none;
   border-radius: 5px;
-  background-color: darkslategrey;
+  background-color: var(--bg-primary);
   color: var(--extra-light);
   font-weight: 600;
   font-size: 1rem;
@@ -150,7 +152,7 @@ video {
 /* Destinations Section--------Destinations Section----------------Destinations Section-------------Destinations Section---------------------- */
 .destinations {
   width: 100%;
-  background-color: rgba(53, 185, 185, 0.112);
+  /*  background-color: var(--bg-accent); */
 }
 
 .destinations-swiper {
@@ -176,13 +178,11 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   padding: 10px;
   text-align: center;
   width: 100%;
-  font-family: 'Ruthie', sans-serif;
-  font-family: 'Sketsa', sans-serif;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .destination-slide img {
@@ -195,11 +195,80 @@ video {
   background-color: darkslategray !important;
 }
 
-@media (min-width: 786px) {
-  .logo {
-    width: 300px;
+/* Packages */
+.services {
+  background-color: var(--bg-accent);
+}
+
+.packages {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: url('./assets/cmophoto-net-EmVKKf3wUZQ-unsplash.jpg') center/cover;
+}
+
+.cabs {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: url('./assets/salah-ait-mokhtar-SROMzydmPsY-unsplash.jpg')
+    center/cover;
+}
+
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.content button {
+  margin-top: 0.5rem;
+  background-color: var(--bg-primary);
+  color: white;
+  padding: 0.7rem 2rem;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+@media screen and (min-width: 800px) {
+  .packages,
+  .cabs {
+    height: 400px;
+    border-radius: 15px;
+  }
+
+  .packages::after,
+  .cabs::after {
+    border-radius: 15px;
   }
 }
+
+.packages::after,
+.cabs::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* .packages-bg-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
 
 /*===================================== FEATURES========================================= */
 
@@ -232,13 +301,13 @@ video {
 .card-services-two,
 .card-services-three {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   padding: 2em 1.5em;
-  background: linear-gradient(#ffffff 50%, darkslategrey 50%);
+  /* background: linear-gradient(#ffffff 50%, var(--bg-primary) 50%); */
   background-size: 100% 200%;
   background-position: 0 2.5%;
   border-radius: 5px;
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0 0 35px rgba(0, 0, 0, 0.12); */
   cursor: pointer;
   transition: 0.5s;
 }
@@ -263,7 +332,7 @@ video {
 }
 
 .icon-wrapper-services {
-  background-color: darkslategrey;
+  background-color: var(--bg-primary);
   position: relative;
   margin: auto;
   font-size: 30px;
@@ -293,7 +362,7 @@ video {
 .card-services-one:hover h3,
 .card-services-two:hover h3,
 .card-services-three:hover h3 {
-  color: #ffffff;
+  /*  color: #ffffff; */
 }
 
 .card-services-one:hover p,
@@ -323,6 +392,102 @@ video {
     max-width: 33.33%;
   }
 }
+
+/* Gallery */
+
+.gallery {
+  background-color: var(--bg-accent);
+}
+
+.gallery-pagination {
+  display: none;
+}
+
+@media screen and (min-width: 520px) {
+  .gallery-pagination {
+    display: block;
+  }
+}
+
+.gallery-container {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-swiper,
+.gallery-thumb-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-swiper,
+.gallery-thumb-swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-swiper {
+  height: 80%;
+  width: 100%;
+}
+
+.gallery-thumb-swiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.gallery-thumb-swiper .swiper-slide,
+.gallery-thumb-swiper .swiper-slide img {
+  border-radius: 15px;
+}
+
+.gallery-thumb-swiper .gallery-slide {
+  width: 30% !important;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumb-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.gallery-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 520px) {
+  .gallery-thumb-swiper {
+    display: none !important;
+  }
+}
+
 /* ----------------------------------TESTMONIAL SECTION-------------------------- */
 .testmonial-section-wrapper {
   width: 100%;
@@ -530,7 +695,7 @@ footer {
   }
 }
 .footer-distributed {
-  background-color: darkslategrey;
+  background-color: var(--bg-primary);
   box-sizing: border-box;
   width: 100%;
   text-align: left;
