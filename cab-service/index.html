@@ -34,7 +34,7 @@
      <header>
         <nav class="navbar navbar-expand-lg fixed-top">
           <div class="container-fluid">
-            <a class="navbar-brand fs-1" href="#">
+            <a class="navbar-brand fs-1" href="../index.html">
               Fave Tour And Travels
               <!--  <div class="logo">
                 <img src="./assets/text-1706121102553.png" alt="" />
@@ -76,7 +76,7 @@
                       data-bs-dismiss="offcanvas"
                       aria-label="Close"
                       aria-current="page"
-                      href="#"
+                      href="../index.html"
                       >Home</a
                     >
                   </li>
@@ -85,7 +85,7 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#"
-                      >Car Rentals</a
+                      >Cab Service</a
                     >
                   </li>
                   <li class="nav-item">
@@ -101,18 +101,22 @@
         </nav>
       </header>
 
-    <section class="home" id="home">
-        <div class="content">
-        <h3 data-aos="fade-up" data-aos-delay="300">Your Comfortable Ride Awaits</h3>
-        <a data-aos="fade-up" data-aos-delay="600" href="#" class="btn"
-          >Explore</a
-        >
+    <section class="home d-flex justify-content-center align-items-center" >
+        <div class="cab-content d-flex justify-content-center align-items-center flex-column" >
+        <h1 data-aos="fade-up" data-aos-delay="300">Your Comfortable Ride Awaits</h1>
+        <a  data-aos="fade-up" data-aos-delay="600" href="#cars" class="explore"
+          >Explore
+          <i
+          class="fa-solid fa-arrow-down fa-beat-fade ps-1 align-middle"
+        ></i>
+        </a>
+        
       </div>
     </section>
     <br />
 
     <!-- Car Collection -->
-    <div class="cars">
+    <div class="cars" id="cars">
       <h1 class="section-title">Our Vehicles</h1>
       <br />
       <div class="cars-container"></div>

@@ -226,7 +226,7 @@ video {
   z-index: 1;
 }
 
-.content button {
+.explore {
   margin-top: 0.5rem;
   background-color: var(--bg-primary);
   color: white;
@@ -237,6 +237,7 @@ video {
   border-bottom-right-radius: 30px;
   border: none;
   outline: none;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 800px) {

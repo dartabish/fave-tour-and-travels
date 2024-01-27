@@ -141,7 +141,7 @@ carCollection.forEach(car => {
                     Baggage: ${car.baggage}
                 </span>
             </div>
-            <button type="button" class="book btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal${car.id}">
+            <button type="button" class="book btn" data-bs-toggle="modal" data-bs-target="#exampleModal${car.id}">
                 Book Now
             </button>
         </div>
