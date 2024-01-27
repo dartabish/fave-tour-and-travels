@@ -1,0 +1,145 @@
+.home {
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 1rem;
+    background: linear-gradient(rgb(100 100 100 / 70%), rgba(17, 17, 17, 0.7)),
+      url(../assets/cab-service/banner-bgg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+  }
+  
+  .home .content {
+    text-align: center;
+  }
+  
+  .home .content span {
+    font-weight: bolder;
+    color: darkslategray;
+    -webkit-text-stroke: 0.2rem #fff;
+    font-size: 6vw;
+    display: block;
+  }
+  
+  .home .content h3 {
+    font-size: 5vw;
+    color: #fff;
+  }
+  
+  .home .content p {
+    max-width: 60rem;
+    margin: 1rem auto;
+    font-size: 1.4rem;
+    color: #aaa;
+    line-height: 2;
+  }
+  
+  .cars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-title {
+    font-size: 2em;
+  }
+  
+  .cars-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+  }
+  
+  .car-card {
+    width: 350px;
+    height: 450px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+  }
+  
+  .car-img-container {
+    height: 60%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .car-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .car-details {
+    padding: 0 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 30%;
+  }
+  
+  .car-title {
+    font-size: 1.5em;
+    padding: 20px 15px 0;
+  }
+  
+  .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .car-capacity,
+  .car-baggage {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+    padding: 7px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: darkslategray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+    margin-right: 10px; /* Adjusted margin-right */
+  }
+  
+  .btn:hover {
+    background-color: slategrey;
+  }
+  @media (max-width: 768px) {
+    
+   
+    .home .content span {
+      font-size: 10vw;
+      -webkit-text-stroke: 0.1rem #fff;
+    }
+    .home .content h3 {
+      font-size: 6vw;
+    }
+  }
+    
+  @media (max-width: 450px) {
+     
+     
+    .banner .content h3 {
+      font-size: 2.7rem;
+    }
+  }
+
+  
