@@ -133,20 +133,23 @@ video {
 }
 
 .hero-content button {
-  padding: 1rem 3rem;
+  padding: 1rem 4rem;
   outline: none;
   border: none;
   border-radius: 5px;
-  background-color: var(--bg-primary);
-  color: var(--extra-light);
-  font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: 0.3s;
+  background-color: var(--bg-primary);
+  color: white;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transition: background-color 0.3s;
 }
 
 .hero-content button:hover {
-  background-color: var(--primary-color-dark);
+  /*  background-color: var(--bg-accent); */
 }
 
 /* Destinations Section--------Destinations Section----------------Destinations Section-------------Destinations Section---------------------- */
@@ -267,12 +270,8 @@ video {
 
 /*===================================== FEATURES========================================= */
 
-.section-services {
-  width: 100%;
-}
-
 .row-services {
-  gap: 4rem;
+  width: 100%;
 }
 
 /* Updated class names for the three cards */
@@ -320,93 +319,18 @@ video {
   background-color: var(--bg-accent);
 }
 
-.gallery-pagination {
-  display: none;
-}
-
-@media screen and (min-width: 520px) {
-  .gallery-pagination {
-    display: block;
-  }
-}
-
-.gallery-container {
-  width: 100%;
-  height: 100%;
-}
-
-.gallery-swiper,
-.gallery-thumb-swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.gallery-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.gallery-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.gallery-swiper,
-.gallery-thumb-swiper {
-  width: 100%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.gallery-slide {
-  background-size: cover;
-  background-position: center;
-}
-
 .gallery-swiper {
-  height: 80%;
   width: 100%;
 }
 
-.gallery-thumb-swiper {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-
-.gallery-thumb-swiper .swiper-slide,
-.gallery-thumb-swiper .swiper-slide img {
-  border-radius: 15px;
-}
-
-.gallery-thumb-swiper .gallery-slide {
-  width: 30% !important;
-  height: 100%;
-  opacity: 0.4;
-}
-
-.gallery-thumb-swiper .swiper-slide-thumb-active {
-  opacity: 1;
-}
-
-.gallery-slide img {
-  display: block;
+.gallery-slide a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-@media screen and (min-width: 520px) {
-  .gallery-thumb-swiper {
-    display: none !important;
-  }
+.swiper-pagination-bullet {
+  color: var(--bg-primary) !important;
 }
 
 /* ----------------------------------TESTMONIAL SECTION-------------------------- */

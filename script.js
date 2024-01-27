@@ -1,3 +1,5 @@
+import PhotoSwipeLightbox from './photoswipe/dist/photoswipe-lightbox.esm.js';
+
 window.addEventListener('scroll', function () {
   const navbar = document.querySelector('.navbar');
   let favHeight;
@@ -22,16 +24,10 @@ var destinationsSwiper = new Swiper('.destinations-swiper', {
   speed: 800,
   spaceBetween: 20,
   grabCursor: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
   pagination: {
-    el: '.swiper-pagination',
-    clickable: 'true',
+    el: '.destination-pagination',
     type: 'progressbar',
   },
-
   autoplay: {
     delay: 2000,
     disableOnInteraction: true,
@@ -50,39 +46,46 @@ var destinationsSwiper = new Swiper('.destinations-swiper', {
   },
 });
 
-var thumbsSwiper = new Swiper('.gallery-thumb-swiper', {
-  loop: true,
-  spaceBetween: 10,
-  slidesPerView: 3,
-  freeMode: true,
-  watchSlidesProgress: true,
+const lightbox = new PhotoSwipeLightbox({
+  gallery: '#my-gallery',
+  children: 'a',
+  zoom: false,
+  tapAction: 'close',
+  showHideAnimationType: 'zoom',
+  closeAnimationDuration: '0000',
+
+  pswpModule: () => import('./photoswipe/dist/photoswipe.esm.js'),
 });
+lightbox.init();
 
 var gallerySwiper = new Swiper('.gallery-swiper', {
-  pagination: {
-    el: '.swiper-pagination',
-    dynamicBullets: true,
-    clickable: true,
-  },
-  grabCursor: true,
-  speed: 800,
-  autoplay: true,
   loop: true,
-  spaceBetween: 10,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  thumbs: {
-    swiper: thumbsSwiper,
+  pagination: {
+    el: '.gallery-pagination',
+    type: 'bullets',
+    clickable: true,
+    dynamicBullets: true,
   },
-
+  speed: 800,
+  autoplay: true,
+  spaceBetween: 10,
+  slidesPerView: 1,
   breakpoints: {
-    520: {
+    560: {
       slidesPerView: 2,
     },
     998: {
       slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+    1400: {
+      slidesPerView: 5,
     },
   },
 });
