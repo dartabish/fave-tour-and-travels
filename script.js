@@ -64,6 +64,7 @@ var gallerySwiper = new Swiper('.gallery-swiper', {
     dynamicBullets: true,
     clickable: true,
   },
+  grabCursor: true,
   speed: 800,
   autoplay: true,
   loop: true,
