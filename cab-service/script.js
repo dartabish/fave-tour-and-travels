@@ -1,131 +1,132 @@
+import { addNavBg } from '../script.js';
+
 const carsContainer = document.querySelector('.cars-container');
-const defaultImagePath = '../../assets/sub-pages/car-rental';
 const carCollection = [
-    {
-        id: 'car-1',
-        name: 'Toyota Glanza',
-        seats: 4,
-        baggage: 3,
-        image: '../assets/cab-service/glanza.png',
-    },
-    {
-        id: 'car-2',
-        name: 'Honda Amaze',
-        seats: 4,
-        baggage: 3,
-        image: '../assets/cab-service/amaze.png',
-    },
-    {
-        id: 'car-3',
-        name: 'Maruti Swift DZire',
-        seats: 4,
-        baggage: 3,
-        image: '../assets/cab-service/dzire.png',
-    },
-    {
-        id: 'car-4',
-        name: 'Toyota Etios',
-        seats: 4,
-        baggage: 3,
-        image: '../assets/cab-service/etios.png',
-    },
-    {
-        id: 'car-5',
-        name: 'Toyota Innova ',
-        seats: 6,
-        baggage: 5,
-        image: '../assets/cab-service/innova.png',
-    },
-    {
-        id: 'car-6',
-        name: 'Toyota Crysta Luxury',
-        seats: 6,
-        baggage: 5,
-        image: '../assets/cab-service/crysta.png',
-    },
-    {
-        id: 'car-7',
-        name: 'Maruti Suzuki Ertiga',
-        seats: 6,
-        baggage: 4,
-        image: '../assets/cab-service/ertiga.png',
-    },
-    {
-        id: 'car-8',
-        name: 'Chevrolet Tavera',
-        seats: 8,
-        baggage: 6,
-        image: '../assets/cab-service/chevrolet-tavera.png',
-    },
-    {
-        id: 'car-9',
-        name: 'Tempo Traveller 12',
-        seats: 12,
-        baggage: 8,
-        image: '../assets/cab-service/tempo12.png',
-    },
-    {
-        id: 'car-10',
-        name: 'Tempo Traveller 17',
-        seats: 17,
-        baggage: 15,
-        image: '../assets/cab-service/tempo-17.png',
-    },
-    {
-        id: 'car-11',
-        name: 'Tempo Traveller 25',
-        seats: 25,
-        baggage: 15,
-        image: '../assets/cab-service/tempo.png',
-    },
-    {
-        id: 'car-12',
-        name: 'Urbania',
-        seats: 17,
-        baggage: 12,
-        image: '../assets/cab-service/urbania.png',
-    },
+  {
+    id: 'car-1',
+    name: 'Toyota Glanza',
+    seats: 4,
+    baggage: 3,
+    image: '../assets/cab-service/glanza.png',
+  },
+  {
+    id: 'car-2',
+    name: 'Honda Amaze',
+    seats: 4,
+    baggage: 3,
+    image: '../assets/cab-service/amaze.png',
+  },
+  {
+    id: 'car-3',
+    name: 'Maruti Swift DZire',
+    seats: 4,
+    baggage: 3,
+    image: '../assets/cab-service/dzire.png',
+  },
+  {
+    id: 'car-4',
+    name: 'Toyota Etios',
+    seats: 4,
+    baggage: 3,
+    image: '../assets/cab-service/etios.png',
+  },
+  {
+    id: 'car-5',
+    name: 'Toyota Innova ',
+    seats: 6,
+    baggage: 5,
+    image: '../assets/cab-service/innova.png',
+  },
+  {
+    id: 'car-6',
+    name: 'Toyota Crysta Luxury',
+    seats: 6,
+    baggage: 5,
+    image: '../assets/cab-service/crysta.png',
+  },
+  {
+    id: 'car-7',
+    name: 'Maruti Suzuki Ertiga',
+    seats: 6,
+    baggage: 4,
+    image: '../assets/cab-service/ertiga.png',
+  },
+  {
+    id: 'car-8',
+    name: 'Chevrolet Tavera',
+    seats: 8,
+    baggage: 6,
+    image: '../assets/cab-service/chevrolet-tavera.png',
+  },
+  {
+    id: 'car-9',
+    name: 'Tempo Traveller 12',
+    seats: 12,
+    baggage: 8,
+    image: '../assets/cab-service/tempo12.png',
+  },
+  {
+    id: 'car-10',
+    name: 'Tempo Traveller 17',
+    seats: 17,
+    baggage: 15,
+    image: '../assets/cab-service/tempo-17.png',
+  },
+  {
+    id: 'car-11',
+    name: 'Tempo Traveller 25',
+    seats: 25,
+    baggage: 15,
+    image: '../assets/cab-service/tempo.png',
+  },
+  {
+    id: 'car-12',
+    name: 'Urbania',
+    seats: 17,
+    baggage: 12,
+    image: '../assets/cab-service/urbania.png',
+  },
 ];
 
 document.addEventListener('submit', function (event) {
-    if (event.target.classList.contains('booking-form')) {
-        event.preventDefault();
+  if (event.target.classList.contains('booking-form')) {
+    event.preventDefault();
 
-        // Extract form data
-        let carId = event.target.getAttribute('data-car-id');
-        let formData = {
-            vehicle: event.target.querySelector(`#floatingCar${carId}`).value,
-            fullName: event.target.querySelector(`#floatingFullName${carId}`).value,
-            phone: event.target.querySelector(`#floatingPhone${carId}`).value,
-            date: event.target.querySelector(`#floatingDate${carId}`).value,
-            time: event.target.querySelector(`#floatingTime${carId}`).value,
-            email: event.target.querySelector(`#floatingEmail${carId}`).value,
-            message: event.target.querySelector(`#floatingMessage${carId}`).value,
-        };
+    // Extract form data
+    let carId = event.target.getAttribute('data-car-id');
+    let formData = {
+      vehicle: event.target.querySelector(`#floatingCar${carId}`).value,
+      fullName: event.target.querySelector(`#floatingFullName${carId}`).value,
+      phone: event.target.querySelector(`#floatingPhone${carId}`).value,
+      date: event.target.querySelector(`#floatingDate${carId}`).value,
+      time: event.target.querySelector(`#floatingTime${carId}`).value,
+      email: event.target.querySelector(`#floatingEmail${carId}`).value,
+      message: event.target.querySelector(`#floatingMessage${carId}`).value,
+    };
 
-        // Construct the WhatsApp message
-        let whatsappMessage =
-            `Selected Vehicle: ${encodeURIComponent(formData.vehicle)}%0a` +
-            `Full Name: ${encodeURIComponent(formData.fullName)}%0a` +
-            `Phone: ${encodeURIComponent(formData.phone)}%0a` +
-            `Date: ${encodeURIComponent(formData.date)}%0a` +
-            `Time: ${encodeURIComponent(formData.time)}%0a` +
-            `Email: ${encodeURIComponent(formData.email)}%0a` +
-            `Message: ${encodeURIComponent(formData.message)}`;
+    // Construct the WhatsApp message
+    let whatsappMessage =
+      `Selected Vehicle: ${encodeURIComponent(formData.vehicle)}%0a` +
+      `Full Name: ${encodeURIComponent(formData.fullName)}%0a` +
+      `Phone: ${encodeURIComponent(formData.phone)}%0a` +
+      `Date: ${encodeURIComponent(formData.date)}%0a` +
+      `Time: ${encodeURIComponent(formData.time)}%0a` +
+      `Email: ${encodeURIComponent(formData.email)}%0a` +
+      `Message: ${encodeURIComponent(formData.message)}`;
 
-        // Construct the WhatsApp URL
-        let whatsappUrl = `https://wa.me/919797231194?text=${whatsappMessage}`;
+    // Construct the WhatsApp URL
+    let whatsappUrl = `https://wa.me/919797231194?text=${whatsappMessage}`;
 
-        // Open the WhatsApp link in a new tab
-        window.open(whatsappUrl, '_blank').focus();
-    }
+    // Open the WhatsApp link in a new tab
+    window.open(whatsappUrl, '_blank').focus();
+  }
 });
 
 carCollection.forEach(car => {
-    let card = document.createElement('div');
-    card.className = 'car-card';
+  let card = document.createElement('div');
+  card.className = 'car-card';
 
-    let cardContent = `
+  let cardContent = `
         <div class="car-img-container">
             <img src="${car.image}" alt="${car.name} Image"/>
         </div>
@@ -150,7 +151,7 @@ carCollection.forEach(car => {
         <div class="modal fade" id="exampleModal${car.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content p-4">
-                    <div class="d-flex">
+                    <div class="d-flex justify-content-between">
                         <h4>Your Booking Details</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -245,6 +246,12 @@ carCollection.forEach(car => {
                 </div>
             `;
 
-    card.innerHTML = cardContent;
-    carsContainer.appendChild(card);
+  card.innerHTML = cardContent;
+  carsContainer.appendChild(card);
+});
+
+AOS.init({
+  duration: 800,
+  offset: 150,
+  once: true,
 });

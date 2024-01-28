@@ -1,593 +1,672 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fave Tour And Travels</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./photoswipe/dist/photoswipe.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fave Tour And Travels</title>
-  <link rel="stylesheet" href="./style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- FONT AWESOME CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./photoswipe/dist/photoswipe.css" />
-</head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-1" href="#"> Fave Tour And Travels </a>
 
-<body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand fs-1" href="#">
-          Fave Tour And Travels
-          <!--  <div class="logo">
-              <img src="./assets/text-1706121102553.png" alt="" />
-            </div> -->
+          <div
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <img src="./assets/list.svg" alt="" />
+          </div>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header pb-0">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0 ps-4">
+              <ul
+                class="navbar-nav justify-content-end gap-lg-4 flex-grow-1 pe-3"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Packages</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="./cab-service/index.html"
+                    >Cab Service</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#about"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="./contact-section/index.html"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero d-flex justify-content-center">
+      <div class="hero-video-container">
+        <video autoplay loop muted>
+          <source src="./assets/banner-hero (1).mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="overlay"></div>
+
+      <div class="hero-content">
+        <h1 id="hero-punchline">KASHMIR AWAITS</h1>
+        <p>
+          Embark on an enchanting journey, where pristine valleys meet timeless
+          beauty
+        </p>
+        <a href="#services">
+          <button class="explore">Explore</button>
         </a>
-
-        <div class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <img src="./assets/list.svg" alt="" />
-        </div>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header pb-0">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body p-0 ps-4">
-            <ul class="navbar-nav justify-content-end gap-lg-4 flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Packages</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Cab Service</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./contact-section/index.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </nav>
-  </header>
+    </section>
+    <br />
+    <br />
 
-  <!-- Hero section -->
-  <section class="hero d-flex justify-content-center">
-    <div class="hero-video-container">
-      <video autoplay loop muted>
-        <source src="./assets/banner-hero (1).mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <!-- Destinations -->
+    <section class="destinations pt-4 pb-4">
+      <h1 class="section-title">Popular Destinations</h1>
+      <!-- Slider main container -->
+      <div class="swiper destinations-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper destinations-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/chaar-chinari.jpg" alt="Char-Chinari" />
+            </div>
+            <h3 class="destination-title test-effect">Char Chinari</h3>
+          </div>
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/ganderbal.jpg" alt="Ganderbal" />
+            </div>
+            <h3 class="destination-title">Ganderbal</h3>
+          </div>
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/tulip-garden.jpg" alt="Tulip Garden" />
+            </div>
+            <h3 class="destination-title">Tulip Garden</h3>
+          </div>
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/sonamarg.jpg" alt="Sonamarg" />
+            </div>
+            <h3 class="destination-title">Sonamarg</h3>
+          </div>
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/pahalgam.jpg" alt="Pahalgam" />
+            </div>
+            <h3 class="destination-title">Pahalgam</h3>
+          </div>
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/river-front.jpg" alt="River-front" />
+            </div>
+            <h3 class="destination-title">Jehlum Riverfront</h3>
+          </div>
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/dachigam.jpg" alt="Dachigam" />
+            </div>
+            <h3 class="destination-title">Dachigam</h3>
+          </div>
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/doodhpathri.jpg" alt="doodhpathri" />
+            </div>
+            <h3 class="destination-title">Doodhpathri</h3>
+          </div>
 
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-      <h1 id="hero-punchline">KASHMIR AWAITS</h1>
-      <p>
-        Embark on an enchanting journey, where pristine valleys meet timeless
-        beauty
-      </p>
-      <a href="#services">
-        <button class="explore">Explore</button>
-      </a>
-    </div>
-  </section>
-  <br />
-  <br />
-
-  <!-- Destinations -->
-  <section class="destinations pt-4 pb-4">
-    <h1 class="section-title">Popular Destinations</h1>
-    <!-- Slider main container -->
-    <div class="swiper destinations-swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper destinations-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/chaar-chinari.jpg" alt="Char-Chinari" />
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/jamia-masjid.jpg" alt="jamia-masjid" />
+            </div>
+            <h3 class="destination-title">Jamia Masjid</h3>
           </div>
-          <h3 class="destination-title test-effect">Char Chinari</h3>
-        </div>
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/ganderbal.jpg" alt="Ganderbal" />
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/gulmarg.jpg" alt="gulmarg" />
+            </div>
+            <h3 class="destination-title">Gulmarg</h3>
           </div>
-          <h3 class="destination-title">Ganderbal</h3>
-        </div>
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/tulip-garden.jpg" alt="Tulip Garden" />
+          <div class="swiper-slide destination-slide">
+            <div class="destination-img-container">
+              <img src="./assets/kokernag.jpg" alt="kokernag" />
+            </div>
+            <h3 class="destination-title">Kokernag</h3>
           </div>
-          <h3 class="destination-title">Tulip Garden</h3>
         </div>
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/sonamarg.jpg" alt="Sonamarg" />
-          </div>
-          <h3 class="destination-title">Sonamarg</h3>
-        </div>
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/pahalgam.jpg" alt="Pahalgam" />
-          </div>
-          <h3 class="destination-title">Pahalgam</h3>
-        </div>
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/river-front.jpg" alt="River-front" />
-          </div>
-          <h3 class="destination-title">Jehlum Riverfront</h3>
-        </div>
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/dachigam.jpg" alt="Dachigam" />
-          </div>
-          <h3 class="destination-title">Dachigam</h3>
-        </div>
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/doodhpathri.jpg" alt="doodhpathri" />
-          </div>
-          <h3 class="destination-title">Doodhpathri</h3>
-        </div>
-
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/jamia-masjid.jpg" alt="jamia-masjid" />
-          </div>
-          <h3 class="destination-title">Jamia Masjid</h3>
-        </div>
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/gulmarg.jpg" alt="gulmarg" />
-          </div>
-          <h3 class="destination-title">Gulmarg</h3>
-        </div>
-        <div class="swiper-slide destination-slide">
-          <div class="destination-img-container">
-            <img src="./assets/kokernag.jpg" alt="kokernag" />
-          </div>
-          <h3 class="destination-title">Kokernag</h3>
-        </div>
+        <div class="swiper-pagination destination-pagination"></div>
       </div>
-      <div class="swiper-pagination destination-pagination"></div>
-    </div>
-  </section>
-  <br />
-  <br />
+    </section>
+    <br />
+    <br />
 
-  <!------------ Services ------------>
-  <section class="services pt-4 pb-4" id="services">
-    <h1 class="section-title">What We Provide</h1>
-    <div class="d-flex flex-column flex-md-row gap-3 ps-md-3 pe-md-3">
-      <div class="packages">
-        <div class="content">
-          <h1>Tour Packages</h1>
+    <!------------ Services ------------>
+    <section class="services pt-4 pb-4" id="services">
+      <h1 class="section-title">What We Provide</h1>
+      <div class="d-flex flex-column flex-md-row gap-3 ps-md-3 pe-md-3">
+        <div class="packages">
+          <div class="content">
+            <h1>Tour Packages</h1>
 
-          <button class="explore fs-5">
-            Explore
-            <i class="fa-solid fa-arrow-right fa-beat-fade ps-1 align-middle"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="cabs">
-        <div class="content">
-          <h1>Cab Service</h1>
-          <a href="./cab-service/index.html">
             <button class="explore fs-5">
               Explore
-              <i class="fa-solid fa-arrow-right fa-beat-fade ps-1 align-middle"></i>
+              <i
+                class="fa-solid fa-arrow-right fa-beat-fade ps-1 align-middle"
+              ></i>
             </button>
-          </a>
+          </div>
+        </div>
+
+        <div class="cabs">
+          <div class="content">
+            <h1>Cab Service</h1>
+            <a href="./cab-service/index.html">
+              <button class="explore fs-5">
+                Explore
+                <i
+                  class="fa-solid fa-arrow-right fa-beat-fade ps-1 align-middle"
+                ></i>
+              </button>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <br />
-  <br />
+    </section>
+    <br />
+    <br />
 
-  <!------------------------------- FEATURES SECTION --------------------------------------->
-  <section class="features">
-    <h2 class="section-title">Our Features</h2>
-    <div class="row-services row justify-content-around">
-      <div class="card-services card-services-one col-lg-4">
-        <div class="icon-wrapper-services">
-          <i class="fa-solid fa-taxi"></i>
+    <!------------------------------- FEATURES SECTION --------------------------------------->
+    <section class="features">
+      <h2 class="section-title">Our Features</h2>
+      <div class="row-services row justify-content-around">
+        <div class="card-services card-services-one col-lg-4">
+          <div class="icon-wrapper-services">
+            <i class="fa-solid fa-taxi"></i>
+          </div>
+          <h3>Seamless Cab Service</h3>
         </div>
-        <h3>Seamless Cab Service</h3>
-      </div>
 
-      <div class="card-services card-services-two col-lg-4">
-        <div class="icon-wrapper-services">
-          <i class="fa-solid fa-shirt"></i>
+        <div class="card-services card-services-two col-lg-4">
+          <div class="icon-wrapper-services">
+            <i class="fa-solid fa-shirt"></i>
+          </div>
+          <h3>Personalized Travel Packages</h3>
         </div>
-        <h3>Personalized Travel Packages</h3>
-      </div>
 
-      <div class="card-services card-services-three col-lg-4">
-        <div class="icon-wrapper-services">
-          <i class="fas fa-wrench"></i>
-        </div>
-        <h3>Smooth Travels, Anywhere, Anytime</h3>
-      </div>
-    </div>
-  </section>
-  <br />
-  <br />
-
-  <!-- Gallery Section -->
-  <section class="gallery pt-4 pb-2">
-    <h1 class="section-title">Gallery</h1>
-
-    <!-- Slider main container -->
-    <div class="swiper gallery-swiper pswp-gallery" id="my-gallery">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper gallery-wrapper pb-5">
-        <!-- Slides -->
-        <div class="swiper-slide gallery-slide">
-          <a href="./assets/gallery/client-1.1.jpeg" data-pswp-width="960" data-pswp-height="1280" target="_blank">
-            <img src="./assets/gallery/client-1.1.jpeg" alt="" />
-          </a>
-        </div>
-        <div class="swiper-slide gallery-slide">
-          <a href="./assets/gallery/client-1.2.jpeg" data-pswp-width="960" data-pswp-height="1280" target="_blank">
-            <img src="./assets/gallery/client-1.2.jpeg" alt="" />
-          </a>
-        </div>
-        <div class="swiper-slide gallery-slide">
-          <a href="./assets/gallery/client-2.1.jpeg" data-pswp-width="960" data-pswp-height="1280" target="_blank">
-            <img src="./assets/gallery/client-2.1.jpeg" alt="" />
-          </a>
-        </div>
-        <div class="swiper-slide gallery-slide">
-          <a href="./assets/gallery/client-2.2.jpeg" data-pswp-width="960" data-pswp-height="1280" target="_blank">
-            <img src="./assets/gallery/client-2.2.jpeg" alt="" />
-          </a>
-        </div>
-        <div class="swiper-slide gallery-slide">
-          <a href="./assets/gallery/client-2.3.jpeg" data-pswp-width="960" data-pswp-height="1280" target="_blank">
-            <img src="./assets/gallery/client-2.3.jpeg" alt="" />
-          </a>
-        </div>
-        <div class="swiper-slide gallery-slide">
-          <a href="./assets/gallery/client-1.3.jpeg" data-pswp-width="960" data-pswp-height="1280" target="_blank">
-            <img src="./assets/gallery/client-1.3.jpeg" alt="" />
-          </a>
+        <div class="card-services card-services-three col-lg-4">
+          <div class="icon-wrapper-services">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <h3>Smooth Travels, Anywhere, Anytime</h3>
         </div>
       </div>
-      <!-- <div class="swiper-button-prev"></div>
+    </section>
+    <br />
+    <br />
+
+    <!-- Gallery Section -->
+    <section class="gallery pt-4 pb-2">
+      <h1 class="section-title">Gallery</h1>
+
+      <!-- Slider main container -->
+      <div class="swiper gallery-swiper pswp-gallery" id="my-gallery">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper gallery-wrapper pb-5">
+          <!-- Slides -->
+          <div class="swiper-slide gallery-slide">
+            <a
+              href="./assets/gallery/client-1.1.jpeg"
+              data-pswp-width="960"
+              data-pswp-height="1280"
+              target="_blank"
+            >
+              <img src="./assets/gallery/client-1.1.jpeg" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <a
+              href="./assets/gallery/client-1.2.jpeg"
+              data-pswp-width="960"
+              data-pswp-height="1280"
+              target="_blank"
+            >
+              <img src="./assets/gallery/client-1.2.jpeg" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <a
+              href="./assets/gallery/client-2.1.jpeg"
+              data-pswp-width="960"
+              data-pswp-height="1280"
+              target="_blank"
+            >
+              <img src="./assets/gallery/client-2.1.jpeg" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <a
+              href="./assets/gallery/client-2.2.jpeg"
+              data-pswp-width="960"
+              data-pswp-height="1280"
+              target="_blank"
+            >
+              <img src="./assets/gallery/client-2.2.jpeg" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <a
+              href="./assets/gallery/client-2.3.jpeg"
+              data-pswp-width="960"
+              data-pswp-height="1280"
+              target="_blank"
+            >
+              <img src="./assets/gallery/client-2.3.jpeg" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <a
+              href="./assets/gallery/client-1.3.jpeg"
+              data-pswp-width="960"
+              data-pswp-height="1280"
+              target="_blank"
+            >
+              <img src="./assets/gallery/client-1.3.jpeg" alt="" />
+            </a>
+          </div>
+        </div>
+        <!-- <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div> -->
-      <div class="swiper-pagination gallery-pagination"></div>
-    </div>
-  </section>
-  <br />
-  <br />
-  <br />
-  <br />
+        <div class="swiper-pagination gallery-pagination"></div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
 
-  <!--------------------------------- TESTIMOMIAL SECTION ----------------------------------->
-  <section class="testmonial-section-wrapper">
-    <h2>Testimonial</h2>
-    <div class="wrapper responsive">
-      <!-- item start -->
-      <div class="item-testmonial">
-        <div class="card-testmonial">
-          <!--  -->
-          <div class="profile_shadow"></div>
+    <!--------------------------------- TESTIMOMIAL SECTION ----------------------------------->
+    <section class="testmonial-section-wrapper">
+      <h2>Testimonial</h2>
+      <div class="wrapper responsive">
+        <!-- item start -->
+        <div class="item-testmonial">
+          <div class="card-testmonial">
+            <!--  -->
+            <div class="profile_shadow"></div>
 
-          <!--  -->
-          <div class="front_top">
-            <h2>WEB DEVELOPER</h2>
-            <div class="profile_shadow1"></div>
-            <!-- profile photo -->
-            <div class="profile_photo"></div>
-          </div>
+            <!--  -->
+            <div class="front_top">
+              <h2>WEB DEVELOPER</h2>
+              <div class="profile_shadow1"></div>
+              <!-- profile photo -->
+              <div class="profile_photo"></div>
+            </div>
 
-          <div class="bottom_inner">
-            <div class="content-wrapper-testmonial">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti ullam, impedit ea voluptatem non consectetur possimus
-                culpa. Minus dicta temporibus, distinctio excepturi ipsa
-              </p>
-              <h5>Mukesh Sharma</h5>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+            <div class="bottom_inner">
+              <div class="content-wrapper-testmonial">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam, impedit ea voluptatem non consectetur possimus
+                  culpa. Minus dicta temporibus, distinctio excepturi ipsa
+                </p>
+                <h5>Mukesh Sharma</h5>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- item end -->
-      <!-- item start -->
-      <div class="item-testmonial">
-        <div class="card-testmonial">
-          <!--  -->
-          <div class="profile_shadow"></div>
+        <!-- item end -->
+        <!-- item start -->
+        <div class="item-testmonial">
+          <div class="card-testmonial">
+            <!--  -->
+            <div class="profile_shadow"></div>
 
-          <!--  -->
-          <div class="front_top">
-            <h2>WEB DEVELOPER</h2>
-            <div class="profile_shadow1"></div>
-            <!-- profile photo -->
-            <div class="profile_photo"></div>
-          </div>
+            <!--  -->
+            <div class="front_top">
+              <h2>WEB DEVELOPER</h2>
+              <div class="profile_shadow1"></div>
+              <!-- profile photo -->
+              <div class="profile_photo"></div>
+            </div>
 
-          <div class="bottom_inner">
-            <div class="content-wrapper-testmonial">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti ullam, impedit ea voluptatem non consectetur possimus
-                culpa. Minus dicta temporibus, distinctio excepturi ipsa
-              </p>
-              <h5>Mukesh Sharma</h5>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+            <div class="bottom_inner">
+              <div class="content-wrapper-testmonial">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam, impedit ea voluptatem non consectetur possimus
+                  culpa. Minus dicta temporibus, distinctio excepturi ipsa
+                </p>
+                <h5>Mukesh Sharma</h5>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- item end -->
-      <!-- item start -->
-      <div class="item-testmonial">
-        <div class="card-testmonial">
-          <!--  -->
-          <div class="profile_shadow"></div>
+        <!-- item end -->
+        <!-- item start -->
+        <div class="item-testmonial">
+          <div class="card-testmonial">
+            <!--  -->
+            <div class="profile_shadow"></div>
 
-          <!--  -->
-          <div class="front_top">
-            <h2>WEB DEVELOPER</h2>
-            <div class="profile_shadow1"></div>
-            <!-- profile photo -->
-            <div class="profile_photo"></div>
-          </div>
+            <!--  -->
+            <div class="front_top">
+              <h2>WEB DEVELOPER</h2>
+              <div class="profile_shadow1"></div>
+              <!-- profile photo -->
+              <div class="profile_photo"></div>
+            </div>
 
-          <div class="bottom_inner">
-            <div class="content-wrapper-testmonial">
-              <p class="mt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti ullam, impedit ea voluptatem non consectetur possimus
-                culpa. Minus dicta temporibus, distinctio excepturi ipsa
-              </p>
-              <h5>Mukesh Sharma</h5>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+            <div class="bottom_inner">
+              <div class="content-wrapper-testmonial">
+                <p class="mt-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam, impedit ea voluptatem non consectetur possimus
+                  culpa. Minus dicta temporibus, distinctio excepturi ipsa
+                </p>
+                <h5>Mukesh Sharma</h5>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- item end -->
-      <!-- item start -->
-      <div class="item-testmonial">
-        <div class="card-testmonial">
-          <!--  -->
-          <div class="profile_shadow"></div>
+        <!-- item end -->
+        <!-- item start -->
+        <div class="item-testmonial">
+          <div class="card-testmonial">
+            <!--  -->
+            <div class="profile_shadow"></div>
 
-          <!--  -->
-          <div class="front_top">
-            <h2>WEB DEVELOPER</h2>
-            <div class="profile_shadow1"></div>
-            <!-- profile photo -->
-            <div class="profile_photo"></div>
-          </div>
+            <!--  -->
+            <div class="front_top">
+              <h2>WEB DEVELOPER</h2>
+              <div class="profile_shadow1"></div>
+              <!-- profile photo -->
+              <div class="profile_photo"></div>
+            </div>
 
-          <div class="bottom_inner">
-            <div class="content-wrapper-testmonial">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti ullam, impedit ea voluptatem non consectetur possimus
-                culpa. Minus dicta temporibus, distinctio excepturi ipsa
-              </p>
-              <h5>Mukesh Sharma</h5>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+            <div class="bottom_inner">
+              <div class="content-wrapper-testmonial">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam, impedit ea voluptatem non consectetur possimus
+                  culpa. Minus dicta temporibus, distinctio excepturi ipsa
+                </p>
+                <h5>Mukesh Sharma</h5>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- item end -->
-      <div class="item-testmonial">
-        <div class="card-testmonial">
-          <!--  -->
-          <div class="profile_shadow"></div>
+        <!-- item end -->
+        <div class="item-testmonial">
+          <div class="card-testmonial">
+            <!--  -->
+            <div class="profile_shadow"></div>
 
-          <!--  -->
-          <div class="front_top">
-            <h2>WEB DEVELOPER</h2>
-            <div class="profile_shadow1"></div>
-            <!-- profile photo -->
-            <div class="profile_photo"></div>
-          </div>
+            <!--  -->
+            <div class="front_top">
+              <h2>WEB DEVELOPER</h2>
+              <div class="profile_shadow1"></div>
+              <!-- profile photo -->
+              <div class="profile_photo"></div>
+            </div>
 
-          <div class="bottom_inner">
-            <div class="content-wrapper-testmonial">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti ullam, impedit ea voluptatem non consectetur possimus
-                culpa. Minus dicta temporibus, distinctio excepturi ipsa
-              </p>
-              <h5>Mukesh Sharma</h5>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+            <div class="bottom_inner">
+              <div class="content-wrapper-testmonial">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam, impedit ea voluptatem non consectetur possimus
+                  culpa. Minus dicta temporibus, distinctio excepturi ipsa
+                </p>
+                <h5>Mukesh Sharma</h5>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- item end -->
-      <div class="item-testmonial">
-        <div class="card-testmonial">
-          <!--  -->
-          <div class="profile_shadow"></div>
+        <!-- item end -->
+        <div class="item-testmonial">
+          <div class="card-testmonial">
+            <!--  -->
+            <div class="profile_shadow"></div>
 
-          <!--  -->
-          <div class="front_top">
-            <h2>WEB DEVELOPER</h2>
-            <div class="profile_shadow1"></div>
-            <!-- profile photo -->
-            <div class="profile_photo"></div>
-          </div>
+            <!--  -->
+            <div class="front_top">
+              <h2>WEB DEVELOPER</h2>
+              <div class="profile_shadow1"></div>
+              <!-- profile photo -->
+              <div class="profile_photo"></div>
+            </div>
 
-          <div class="bottom_inner">
-            <div class="content-wrapper-testmonial">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti ullam, impedit ea voluptatem non consectetur possimus
-                culpa. Minus dicta temporibus, distinctio excepturi ipsa
-              </p>
-              <h5>Mukesh Sharma</h5>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+            <div class="bottom_inner">
+              <div class="content-wrapper-testmonial">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam, impedit ea voluptatem non consectetur possimus
+                  culpa. Minus dicta temporibus, distinctio excepturi ipsa
+                </p>
+                <h5>Mukesh Sharma</h5>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- item end -->
-      <div class="item-testmonial">
-        <div class="card-testmonial">
-          <!--  -->
-          <div class="profile_shadow"></div>
+        <!-- item end -->
+        <div class="item-testmonial">
+          <div class="card-testmonial">
+            <!--  -->
+            <div class="profile_shadow"></div>
 
-          <!--  -->
-          <div class="front_top">
-            <h2>WEB DEVELOPER</h2>
-            <div class="profile_shadow1"></div>
-            <!-- profile photo -->
-            <div class="profile_photo"></div>
-          </div>
+            <!--  -->
+            <div class="front_top">
+              <h2>WEB DEVELOPER</h2>
+              <div class="profile_shadow1"></div>
+              <!-- profile photo -->
+              <div class="profile_photo"></div>
+            </div>
 
-          <div class="bottom_inner">
-            <div class="content-wrapper-testmonial">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti ullam, impedit ea voluptatem non consectetur possimus
-                culpa. Minus dicta temporibus, distinctio excepturi ipsa
-              </p>
-              <h5>Mukesh Sharma</h5>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+            <div class="bottom_inner">
+              <div class="content-wrapper-testmonial">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam, impedit ea voluptatem non consectetur possimus
+                  culpa. Minus dicta temporibus, distinctio excepturi ipsa
+                </p>
+                <h5>Mukesh Sharma</h5>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- item end -->
       </div>
-      <!-- item end -->
-    </div>
-  </section>
+    </section>
 
-  <!----------------------------------- FOOTER SECTION --------------------------------------->
-  <footer class="footer-distributed">
-    <div class="footer-left">
-      <img src="./assets/text-1706121102553.png" alt="" srcset="" />
+    <!----------------------------------- FOOTER SECTION --------------------------------------->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <img src="./assets/text-1706121102553.png" alt="" srcset="" />
 
-      <p class="footer-links">
-        <a href="#">Home</a>
-        |
-        <a href="#">About</a>
-        |
-        <a href="#">Contact</a>
-        |
-        <a href="#">Blog</a>
+        <p class="footer-links">
+          <a href="#">Home</a>
+          |
+          <a href="#">About</a>
+          |
+          <a href="#">Contact</a>
+          |
+          <a href="#">Blog</a>
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fas fa-location"></i>
+          <p>Ishber Nishat</p>
+        </div>
+
+        <div>
+          <i class="fas fa-phone"></i>
+          <p>+979723xxxx</p>
+        </div>
+        <div>
+          <i class="fas fa-envelope"></i>
+          <p><a href="mailto:xxxxx@gmail.com">xyz@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          <strong>FaveTour&Travels</strong> "Discover wonders with Fave Tours.
+          Unforgettable journeys, seamless experiences. Your adventure awaits."
+        </p>
+        <div class="footer-icons">
+          <a href="#"> <i class="fas fa-facebook"></i></a>
+          <a href="#"><i class="fas fa-instagram"></i></a>
+          <a href="#"><i class="fas fa-linkedin"></i></a>
+          <a href="#"><i class="fas fa-twitter"></i></a>
+          <a href="#"><i class="fas fa-youtube"></i></a>
+        </div>
+      </div>
+      <hr class="copyright-line" />
+      <p class="footer-copyright">
+        Copyright © 2024 <strong>FaveTour&Travels</strong> All rights reserved
       </p>
-    </div>
+    </footer>
 
-    <div class="footer-center">
-      <div>
-        <i class="fas fa-location"></i>
-        <p>Ishber Nishat</p>
-      </div>
+    <!-- TESTMONIAL -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
 
-      <div>
-        <i class="fas fa-phone"></i>
-        <p>+979723xxxx</p>
-      </div>
-      <div>
-        <i class="fas fa-envelope"></i>
-        <p><a href="mailto:xxxxx@gmail.com">xyz@gmail.com</a></p>
-      </div>
-    </div>
-    <div class="footer-right">
-      <p class="footer-company-about">
-        <span>About the company</span>
-        <strong>FaveTour&Travels</strong> "Discover wonders with Fave Tours.
-        Unforgettable journeys, seamless experiences. Your adventure awaits."
-      </p>
-      <div class="footer-icons">
-        <a href="#"> <i class="fas fa-facebook"></i></a>
-        <a href="#"><i class="fas fa-instagram"></i></a>
-        <a href="#"><i class="fas fa-linkedin"></i></a>
-        <a href="#"><i class="fas fa-twitter"></i></a>
-        <a href="#"><i class="fas fa-youtube"></i></a>
-      </div>
-    </div>
-    <hr class="copyright-line" />
-    <p class="footer-copyright">
-      Copyright © 2024 <strong>FaveTour&Travels</strong> All rights reserved
-    </p>
-  </footer>
-
-  <!-- TESTMONIAL -->
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script type="module" src="./script.js"></script>
-<script src="./reviews.js"></script>
-
-
-
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="./script.js"></script>
+  <script src="./reviews.js"></script>
 </html>

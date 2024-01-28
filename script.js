@@ -1,24 +1,28 @@
 import PhotoSwipeLightbox from './photoswipe/dist/photoswipe-lightbox.esm.js';
 
-window.addEventListener('scroll', function () {
-  const navbar = document.querySelector('.navbar');
-  let favHeight;
-  var scrollPosition = window.scrollY;
-  var screenWidth =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-  if (screenWidth <= 998) {
-    favHeight = 100;
-  } else {
-    favHeight = 500;
-  }
-  if (scrollPosition > favHeight) {
-    navbar.style.background = 'darkslategrey ';
-  } else {
-    navbar.style.backgroundColor = 'transparent';
-  }
-});
+export function addNavBg() {
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    let favHeight;
+    var scrollPosition = window.scrollY;
+    var screenWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    if (screenWidth <= 998) {
+      favHeight = 100;
+    } else {
+      favHeight = 500;
+    }
+    if (scrollPosition > favHeight) {
+      navbar.style.background = 'darkslategrey ';
+    } else {
+      navbar.style.backgroundColor = 'transparent';
+    }
+  });
+}
+
+addNavBg();
 
 var destinationsSwiper = new Swiper('.destinations-swiper', {
   speed: 800,
