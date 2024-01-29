@@ -152,6 +152,91 @@ video {
   /*  background-color: var(--bg-accent); */
 }
 
+/* About section */
+
+.about-section-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem; 
+}
+
+.about-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  letter-spacing: 2px;
+  padding: 0 1rem;
+}
+
+.about-image-container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-text-container {
+  flex: 1;
+  font-size: 21px;
+  text-align: center;
+}
+
+.about-text-container h1 {
+  font-size: 45px;
+  padding: 20px 0px;
+  color: darkslategray;
+}
+
+.about-text-container p {
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  text-align: justify;
+  font-size: 25px;
+}
+
+.text-container a {
+  text-decoration: none;
+  padding: 12px;
+  background-color: darkslategray;
+  border: 2px solid transparent;
+  color: white;
+  border-radius: 5px;
+  transition: .3s all ease;
+}
+
+.about-text-container a:hover {
+  background-color: transparent;
+  color: black;
+  border: 2px solid rebeccapurple;
+}
+
+@media screen and (min-width: 992px) {
+  .about-container {
+    flex-direction: row;
+    padding: 0 5rem;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-text-container p {
+    text-align: left;
+  }
+
+  .about-image-container {
+    max-width: 50%;
+  }
+
+  .about-text-container {
+    max-width: 50%;
+  }
+}
+
+
+
 /* Destinations Section--------Destinations Section----------------Destinations Section-------------Destinations Section---------------------- */
 .destinations {
   width: 100%;

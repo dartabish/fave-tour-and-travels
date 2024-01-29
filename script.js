@@ -93,3 +93,15 @@ var gallerySwiper = new Swiper('.gallery-swiper', {
     },
   },
 });
+
+// About section
+
+const container = document.getElementById('animation-container');
+
+const animation = lottie.loadAnimation({
+  container: container,
+  renderer: 'svg', // or 'canvas'
+  loop: true,
+  autoplay: true,
+  path: './assets/Animation - 1706528908157.json', // Path to your JSON file
+});
