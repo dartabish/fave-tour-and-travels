@@ -15,6 +15,7 @@
   --text-dark: #282d31;
   --text-light: #767268;
   --extra-light: #f3f4f6;
+  --bg-subtext:rgb(59, 114, 114);
   --bg-accent: rgba(23, 187, 187, 0.169);
   --bg-primary: darkslategray;
 }
@@ -160,6 +161,7 @@ video {
   flex-direction: column;
   align-items: center;
   padding: 1rem; 
+  letter-spacing: 2px;
 }
 
 .about-container {
@@ -168,7 +170,7 @@ video {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  letter-spacing: 2px;
+ color: var(--bg-subtext);
   padding: 0 1rem;
 }
 
@@ -183,6 +185,7 @@ video {
   flex: 1;
   font-size: 21px;
   text-align: center;
+  
 }
 
 .about-text-container h1 {
@@ -192,26 +195,16 @@ video {
 }
 
 .about-text-container p {
-  margin-bottom: 20px;
+ 
   color: var(--text-primary);
-  text-align: justify;
-  font-size: 25px;
-}
-
-.text-container a {
-  text-decoration: none;
-  padding: 12px;
-  background-color: darkslategray;
-  border: 2px solid transparent;
-  color: white;
-  border-radius: 5px;
-  transition: .3s all ease;
-}
-
-.about-text-container a:hover {
-  background-color: transparent;
-  color: black;
-  border: 2px solid rebeccapurple;
+  font-size: 23px;
+  max-width: calc(100% - 2rem);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  text-align: left;
+  letter-spacing: 2px;
 }
 
 @media screen and (min-width: 992px) {
@@ -232,6 +225,13 @@ video {
 
   .about-text-container {
     max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .about-text-container,
+  .about-text-container p {
+    font-size: 18px; /* Adjust the font size as needed for mobile */
   }
 }
 
