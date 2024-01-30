@@ -689,6 +689,7 @@ video {
 }
 .footer-copyright {
   text-align: center;
+  font-size: 14px;
 }
 
 /* Media Query for larger screens (Desktop) */
