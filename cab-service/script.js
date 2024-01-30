@@ -1,4 +1,4 @@
-import { addNavBg } from '../script.js';
+// import { addNavBg } from '../script.js';
 
 const carsContainer = document.querySelector('.cars-container');
 const carCollection = [
@@ -88,7 +88,8 @@ const carCollection = [
   },
 ];
 
-document.addEventListener('submit', function (event) {
+// Event listener for form submissions
+carsContainer.addEventListener('submit', function (event) {
   if (event.target.classList.contains('booking-form')) {
     event.preventDefault();
 
@@ -122,6 +123,7 @@ document.addEventListener('submit', function (event) {
   }
 });
 
+// Rendering car cards
 carCollection.forEach(car => {
   let card = document.createElement('div');
   card.className = 'car-card';
