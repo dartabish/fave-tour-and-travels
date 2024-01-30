@@ -1,16 +1,4 @@
 import PhotoSwipeLightbox from './photoswipe/dist/photoswipe-lightbox.esm.js';
-/* import ityped from './ityped-master/src/index.js';
-
-document.addEventListener('DOMContentLoaded', function () {
-  const typingElement = document.querySelector('#hero-punchline');
-  ityped.init(typingElement, {
-    strings: ['Hello', 'World', 'This is iTyped!'],
-    typeSpeed: 120, // typing speed in ms
-    backSpeed: 80, // backspacing speed in ms
-    backDelay: 500, // delay before backspacing in ms
-    loop: true, // loop the animation
-  });
-}); */
 
 export function addNavBg() {
   window.addEventListener('scroll', function () {
@@ -108,7 +96,6 @@ var gallerySwiper = new Swiper('.gallery-swiper', {
 // About section
 
 const container = document.getElementById('animation-container');
-
 const animation = lottie.loadAnimation({
   container: container,
   renderer: 'svg', // or 'canvas'
@@ -116,3 +103,14 @@ const animation = lottie.loadAnimation({
   autoplay: true,
   path: './assets/Animation - 1706528908157.json', // Path to your JSON file
 });
+
+new TypeIt('#hero-punchline', {
+  strings: 'Embark Kashmir',
+  speed: 70,
+  cursor: false,
+}).go();
+
+new TypeIt('.hero-one-liner', {
+  strings: 'Crafting journeys, not just trips ',
+  speed: 100,
+}).go();

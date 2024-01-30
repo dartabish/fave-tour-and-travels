@@ -43,9 +43,6 @@ body {
 
 /* ------------------------ */
 /* Nav */
-.navbar {
-  /* background-color: var(--primary-color); */
-}
 
 .navbar-brand {
   font-family: 'Sketsa', sans-serif;
@@ -59,7 +56,8 @@ body {
   color: white;
 }
 
-.navbar a:visited {
+.navbar a:visited,
+.navbar a:active {
   color: white;
 }
 
@@ -86,18 +84,17 @@ body {
 /* Hero Section------  -----Hero Section----------------Hero Section-------------Hero Section---------------------- */
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
 }
 
 .hero-content {
-  height: 100%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   color: var(--extra-light);
-  padding: 2rem;
+  padding: 0 20px;
 }
 
 .hero-content p {
@@ -126,33 +123,32 @@ video {
 }
 
 .hero-content h1 {
-  font-size: 2rem;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .hero-content p {
   text-align: center;
 }
 
-.hero-explore {
-  padding: 1rem 4rem;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  cursor: pointer;
+.hero-explore,
+#hero-explore,
+#learn-more {
   background-color: var(--bg-primary);
   color: white;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   transition: background-color 0.3s;
   text-decoration: none;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  width: 10rem;
 }
 
-.hero-content button:hover {
-  /*  background-color: var(--bg-accent); */
+#learn-more {
+  background-color: transparent;
+  outline: 1px solid grey;
+}
+
+#hero-explore:hover {
+  background-color: rgb(29, 48, 48);
 }
 
 /* About section */
@@ -185,23 +181,20 @@ video {
 
 .about-text-container {
   flex: 1;
-  font-size: 21px;
   text-align: center;
-}
-
-.about-text-container h1 {
-  font-size: 45px;
-  padding: 20px 0px;
-  color: darkslategray;
 }
 
 .about-text-container p {
   color: var(--text-primary);
-  font-size: 23px;
+  font-size: 26px;
   max-width: calc(100% - 2rem);
 }
 
 @media screen and (min-width: 992px) {
+  .hero-content {
+    height: 90%;
+  }
+
   .about-container {
     flex-direction: row;
     padding: 0 5rem;
@@ -580,12 +573,12 @@ video {
   width: 10px;
   height: 10px;
   border: none;
-  background-color: #aadcf0;
+  background-color: var(--bg-accent);
   padding: 0;
 }
 
 .slick-dots .slick-active button {
-  background-color: #025a9a;
+  background-color: var(--bg-primary);
 }
 
 .slick-arrow {

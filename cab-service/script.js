@@ -241,7 +241,7 @@ carCollection.forEach(car => {
                                     ></textarea>
                                     <label for="floatingMessage${car.id}">Message</label>
                                 </div>
-                                <button id="submitForm" type="submit" class="send-enquiry btn mt-2">Send Enquiry</button>
+                                <button id="submitForm" type="submit" class="send-enquiry btn btn-warning mt-2">Send Enquiry</button>
                             </form>
                         </div>
                     </div>
