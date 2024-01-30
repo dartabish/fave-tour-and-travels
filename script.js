@@ -1,4 +1,16 @@
 import PhotoSwipeLightbox from './photoswipe/dist/photoswipe-lightbox.esm.js';
+/* import ityped from './ityped-master/src/index.js';
+
+document.addEventListener('DOMContentLoaded', function () {
+  const typingElement = document.querySelector('#hero-punchline');
+  ityped.init(typingElement, {
+    strings: ['Hello', 'World', 'This is iTyped!'],
+    typeSpeed: 120, // typing speed in ms
+    backSpeed: 80, // backspacing speed in ms
+    backDelay: 500, // delay before backspacing in ms
+    loop: true, // loop the animation
+  });
+}); */
 
 export function addNavBg() {
   window.addEventListener('scroll', function () {
@@ -70,9 +82,8 @@ var gallerySwiper = new Swiper('.gallery-swiper', {
   },
   pagination: {
     el: '.gallery-pagination',
-    type: 'bullets',
+    type: 'progressbar',
     clickable: true,
-    dynamicBullets: true,
   },
   speed: 800,
   autoplay: true,
