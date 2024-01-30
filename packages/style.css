@@ -1,0 +1,179 @@
+.package-hero {
+  background: linear-gradient(rgb(100 100 100 / 70%), rgba(17, 17, 17, 0.7)),
+    url(../assets/packages/packages-banner.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+.package-hero-content {
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.package-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.package-card {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-bottom: 10px;
+  width: 500px;
+}
+
+.package-card-banner {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 375px;
+}
+
+.package-card-banner img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.itenary li {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+/* .itenary {
+  max-height: 375px;
+} */
+
+.package-card-title {
+  width: 50%;
+}
+
+.package-card-title,
+.itenary h2 {
+  color: var(--bg-primary);
+}
+
+.duration {
+  color: var(--bg-primary);
+}
+
+.package-card-header,
+.package-card-amenities {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.368);
+}
+
+.itenary li:last-child {
+  border-bottom: none;
+}
+
+.package-card-amenities {
+  padding: 0;
+  width: 100%;
+}
+
+.package-card-amenities li {
+  text-align: center;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.package-card-amenities-icon {
+  background-color: var(--bg-primary);
+  position: relative;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.package-card-amenities-icon:hover {
+  cursor: pointer;
+}
+
+.package-card-amenities i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.package-card-amenities-icon:hover {
+  color: var(--bg-primary);
+  background-color: white;
+}
+
+.package-card-booking button {
+  border: 3px solid darkslategray;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: var(--bg-primary);
+
+  outline: none;
+  padding: 0.7rem;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.package-card-booking button:hover {
+  background-color: rgba(46, 76, 76, 0.863);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--bg-accent) !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* .package-card-details {
+  max-height: 375px;
+} */
+
+@media screen and (min-width: 992px) {
+  /* .package-card-banner img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  } */
+
+  .package-card {
+    padding-bottom: unset;
+    /* border-bottom-left-radius: 15px; */
+  }
+
+  .package-card-details {
+    border-bottom: unset;
+  }
+
+  .package-card-banner {
+    border-top-right-radius: 0;
+  }
+
+  .accordion-body {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+}
