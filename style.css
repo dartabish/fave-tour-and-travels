@@ -630,11 +630,12 @@ video {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  color: white;
 }
 
-.footer-center div {
+/* .footer-center div {
   margin: 10px 0;
-}
+} */
 
 .footer-center i {
   margin-right: 0.5rem;
@@ -643,6 +644,7 @@ video {
 
 .footer-center a {
   color: white;
+  text-decoration: none;
 }
 
 .footer-bottom,
