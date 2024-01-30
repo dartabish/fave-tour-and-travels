@@ -149,7 +149,7 @@ carCollection.forEach(car => {
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal${car.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content p-4">
                     <div class="d-flex justify-content-between">
                         <h4>Your Booking Details</h4>
@@ -239,7 +239,7 @@ carCollection.forEach(car => {
                                     ></textarea>
                                     <label for="floatingMessage${car.id}">Message</label>
                                 </div>
-                                <button id="submitForm" type="submit" class="send-enquiry btn btn-warning mt-2">Send Enquiry</button>
+                                <button id="submitForm" type="submit" class="send-enquiry btn mt-2">Send Enquiry</button>
                             </form>
                         </div>
                     </div>
