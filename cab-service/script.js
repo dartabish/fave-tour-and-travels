@@ -129,123 +129,124 @@ carCollection.forEach(car => {
   card.className = 'car-card';
 
   let cardContent = `
-    <div class="car-img-container">
-      <img src="${car.image}" alt="${car.name} Image"/>
-    </div>
-    <h3 class="car-title">${car.name}</h3>
-    <div class="car-details d-flex align-items-center justify-content-between">
-      <div>
-        <span class="car-capacity">
-          <i class="fa-solid fa-user"></i>
-          Seats: ${car.seats}
-        </span>
-        <span class="car-baggage">
-          <i class="fa-solid fa-suitcase-rolling"></i>
-          Baggage: ${car.baggage}
-        </span>
-      </div>
-      <button type="button" class="book btn" data-bs-toggle="modal" data-bs-target="#exampleModal${car.id}">
-        Book Now
-      </button>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal${car.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content p-4">
-          <div class="d-flex justify-content-between">
-            <h4>Your Booking Details</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <hr>
-          <div class="booking-details"></div>
-          <form id="bookingForm${car.id}" class="booking-form" data-car-id="${car.id}" method="POST">
-            <div class="form-floating mb-2"></div>
-            <div class="form-floating mb-2">
-              <input
-                disabled
-                value="${car.name}"
-                type="text"
-                name="Selected car"
-                class="form-control"
-                id="floatingCar${car.id}"
-                placeholder="Selected car"
-                required
-              />
-              <label for="floatingCar${car.id}">Selected Car</label>
-            </div>
-            <div class="form-floating mb-2">
-              <input
-                type="text"
-                name="Full Name"
-                class="form-control"
-                id="floatingFullName${car.id}"
-                placeholder="Full Name"
-                required
-              />
-              <label for="floatingFullName${car.id}">Full Name</label>
-            </div>
-            <div class="form-floating mb-2">
-              <input
-                type="tel"
-                name="Phone"
-                class="form-control"
-                id="floatingPhone${car.id}"
-                placeholder="Phone"
-                required
-              />
-              <label for="floatingPhone${car.id}">Phone</label>
-            </div>
-            <div class="row ps-2 pe-2">
-              <div class="form-floating mb-2 col p-1">
-                <input
-                  type="date"
-                  name="Date"
-                  class="form-control"
-                  id="floatingDate${car.id}"
-                  placeholder="Select Date"
-                  required
-                />
-                <label for="floatingDate${car.id}">Select Date</label>
-              </div>
-              <div class="form-floating mb-2 col p-1">
-                <input
-                  type="time"
-                  name="Time"
-                  class="form-control"
-                  id="floatingTime${car.id}"
-                  placeholder="Select Time"
-                  required
-                />
-                <label for="floatingTime${car.id}">Select Time</label>
-              </div>
-            </div>
-            <div class="form-floating mb-2">
-              <input
-                type="email"
-                name="Email"
-                class="form-control"
-                id="floatingEmail${car.id}"
-                placeholder="Email"
-              />
-              <label for="floatingEmail${car.id}">Email (Optional)</label>
-            </div>
-            <div class="form-floating mb-2">
-              <textarea
-                class="form-control"
-                name="Message"
-                id="floatingMessage${car.id}"
-                placeholder="Message"
-                rows="4"
-                cols="50"
-              ></textarea>
-              <label for="floatingMessage${car.id}">Message</label>
-            </div>
-            <button type="submit" class="send-enquiry btn btn-warning mt-2">Send Enquiry</button>
-          </form>
+        <div class="car-img-container">
+            <img src="${car.image}" alt="${car.name} Image"/>
         </div>
-      </div>
-    </div>
-  `;
+        <h3 class="car-title">${car.name}</h3>
+        <div class="car-details d-flex align-items-center justify-content-between">
+            <div>
+                <span class="car-capacity">
+                    <i class="fa-solid fa-user "></i>
+                    Seats: ${car.seats}
+                </span>
+                <span class="car-baggage">
+                    <i class="fa-solid fa-suitcase-rolling"></i>
+                    Baggage: ${car.baggage}
+                </span>
+            </div>
+            <button type="button" class="book btn" data-bs-toggle="modal" data-bs-target="#exampleModal${car.id}">
+                Book Now
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal${car.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content p-4">
+                    <div class="d-flex justify-content-between">
+                        <h4>Your Booking Details</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <hr>
+                    <div class="booking-details"></div>
+                    <form id="bookingForm${car.id}" class="booking-form" data-car-id="${car.id}"  method="POST">
+                        <div class="form-floating mb-2"></div>
+                        <div class="form-floating mb-2">
+                            <input
+                                disabled
+                                value="${car.name}"
+                                type="text"
+                                name="Selected car"
+                                class="form-control"
+                                id="floatingCar${car.id}"
+                                placeholder="Selected car"
+                                required
+                            />
+                            <label for="floatingCar${car.id}">Selected Car</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input
+                                type="text"
+                                name="Full Name"
+                                class="form-control"
+                                id="floatingFullName${car.id}"
+                                placeholder="Full Name"
+                                required
+                            />
+                            <label for="floatingFullName${car.id}">Full Name</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input
+                                type="tel"
+                                name="Phone"
+                                class="form-control"
+                                id="floatingPhone${car.id}"
+                                placeholder="Phone"
+                                required
+                            />
+                            <label for="floatingPhone${car.id}">Phone</label>
+                        </div>
+                        <div class="row ps-2 pe-2">
+                            <div class="form-floating mb-2 col p-1">
+                                <input
+                                    type="date"
+                                    name="Date"
+                                    class="form-control"
+                                    id="floatingDate${car.id}"
+                                    placeholder="Select Date"
+                                    required
+                                />
+                                <label for="floatingDate${car.id}">Select Date</label>
+                                    </div>
+                                    <div class="form-floating mb-2 col p-1">
+                                        <input
+                                            type="time"
+                                            name="Time"
+                                            class="form-control"
+                                            id="floatingTime${car.id}"
+                                            placeholder="Select Time"
+                                            required
+                                        />
+                                        <label for="floatingTime${car.id}">Select Time</label>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input
+                                        type="email"
+                                        name="Email"
+                                        class="form-control"
+                                        id="floatingEmail${car.id}"
+                                        placeholder="Email" 
+                                    />
+                                    <label for="floatingEmail${car.id}">Email (Optional)</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <textarea
+                                        class="form-control"
+                                        name="Message"
+                                        id="floatingMessage${car.id}"
+                                        placeholder="Message"
+                                        rows="4"
+                                        cols="50"
+                                    ></textarea>
+                                    <label for="floatingMessage${car.id}">Message</label>
+                                </div>
+                                <button id="submitForm" type="submit" class="send-enquiry btn mt-2">Send Enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            `;
 
   card.innerHTML = cardContent;
   carsContainer.appendChild(card);
