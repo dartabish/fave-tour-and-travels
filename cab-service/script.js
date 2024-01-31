@@ -88,41 +88,6 @@ const carCollection = [
   },
 ];
 
-// Event listener for form submissions
-carsContainer.addEventListener('submit', function (event) {
-  if (event.target.classList.contains('booking-form')) {
-    event.preventDefault();
-
-    // Extract form data
-    let carId = event.target.getAttribute('data-car-id');
-    let formData = {
-      vehicle: event.target.querySelector(`#floatingCar${carId}`).value,
-      fullName: event.target.querySelector(`#floatingFullName${carId}`).value,
-      phone: event.target.querySelector(`#floatingPhone${carId}`).value,
-      date: event.target.querySelector(`#floatingDate${carId}`).value,
-      time: event.target.querySelector(`#floatingTime${carId}`).value,
-      email: event.target.querySelector(`#floatingEmail${carId}`).value,
-      message: event.target.querySelector(`#floatingMessage${carId}`).value,
-    };
-
-    // Construct the WhatsApp message
-    let whatsappMessage =
-      `Selected Vehicle: ${encodeURIComponent(formData.vehicle)}%0a` +
-      `Full Name: ${encodeURIComponent(formData.fullName)}%0a` +
-      `Phone: ${encodeURIComponent(formData.phone)}%0a` +
-      `Date: ${encodeURIComponent(formData.date)}%0a` +
-      `Time: ${encodeURIComponent(formData.time)}%0a` +
-      `Email: ${encodeURIComponent(formData.email)}%0a` +
-      `Message: ${encodeURIComponent(formData.message)}`;
-
-    // Construct the WhatsApp URL
-    let whatsappUrl = `https://wa.me/919797231194?text=${whatsappMessage}`;
-
-    // Open the WhatsApp link in a new tab
-    window.open(whatsappUrl, '_blank').focus();
-  }
-});
-
 // Rendering car cards
 carCollection.forEach(car => {
   let card = document.createElement('div');
@@ -160,7 +125,6 @@ carCollection.forEach(car => {
                     <hr>
                     <div class="booking-details"></div>
                     <form id="bookingForm${car.id}" class="booking-form" data-car-id="${car.id}"  method="POST">
-                        <div class="form-floating mb-2"></div>
                         <div class="form-floating mb-2">
                             <input
                                 disabled
@@ -173,6 +137,36 @@ carCollection.forEach(car => {
                                 required
                             />
                             <label for="floatingCar${car.id}">Selected Car</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <select class="form-select" id="floatingSector${car.id}">
+                                <option selected value="Srinagar">Srinagar</option>
+                                <option>Jammu</option>
+                                <option>Ladakh</option>
+                            </select>
+                            <label for="floatingSector${car.id}">Sector</label>
+                        </div>
+                        <div class="row ps-2 pe-2">
+                              <div class="form-floating mb-2 col p-1">
+                                <input
+                                    type="date"
+                                    name="Start Date"
+                                    class="form-control"
+                                    id="floatingStartDate${car.id}"
+                                    placeholder="Date of Arrival" 
+                                    />
+                               <label for="floatingStartDate${car.id}">Date of Arrival</label>
+                              </div>
+                              <div class="form-floating mb-2 col p-1">
+                                  <input
+                                    type="date"
+                                    name="End Date"
+                                    class="form-control"
+                                    id="floatingEndDate${car.id}"
+                                    placeholder="Date of Departure" 
+                                    />
+                               <label for="floatingEndDate${car.id}">Date of Departure</label>
+                              </div>
                         </div>
                         <div class="form-floating mb-2">
                             <input
@@ -196,30 +190,6 @@ carCollection.forEach(car => {
                             />
                             <label for="floatingPhone${car.id}">Phone</label>
                         </div>
-                        <div class="row ps-2 pe-2">
-                            <div class="form-floating mb-2 col p-1">
-                                <input
-                                    type="date"
-                                    name="Date"
-                                    class="form-control"
-                                    id="floatingDate${car.id}"
-                                    placeholder="Select Date"
-                                    required
-                                />
-                                <label for="floatingDate${car.id}">Select Date</label>
-                                    </div>
-                                    <div class="form-floating mb-2 col p-1">
-                                        <input
-                                            type="time"
-                                            name="Time"
-                                            class="form-control"
-                                            id="floatingTime${car.id}"
-                                            placeholder="Select Time"
-                                            required
-                                        />
-                                        <label for="floatingTime${car.id}">Select Time</label>
-                                    </div>
-                                </div>
                                 <div class="form-floating mb-2">
                                     <input
                                         type="email"
@@ -236,12 +206,11 @@ carCollection.forEach(car => {
                                         name="Message"
                                         id="floatingMessage${car.id}"
                                         placeholder="Message"
-                                        rows="4"
-                                        cols="50"
+                                        style="height: 160px"
                                     ></textarea>
-                                    <label for="floatingMessage${car.id}">Message</label>
+                                    <label for="floatingMessage${car.id}">Additional Instructions</label>
                                 </div>
-                                <button id="submitForm" type="submit" class="send-enquiry btn btn-warning mt-2">Send Enquiry</button>
+                                <button id="submitForm${car.id}" type="submit" class="send-enquiry mt-2 w-100">Send Enquiry</button>
                             </form>
                         </div>
                     </div>
@@ -250,6 +219,39 @@ carCollection.forEach(car => {
 
   card.innerHTML = cardContent;
   carsContainer.appendChild(card);
+});
+
+// Event listener for form submissions
+carsContainer.addEventListener('submit', function (event) {
+  if (event.target.classList.contains('booking-form')) {
+    event.preventDefault();
+
+    // Extract form data
+    let carId = event.target.getAttribute('data-car-id');
+    let formData = {
+      vehicle: event.target.querySelector(`#floatingCar${carId}`).value,
+      sector: event.target.querySelector(`#floatingSector${carId}`).value,
+      fullName: event.target.querySelector(`#floatingFullName${carId}`).value,
+      phone: event.target.querySelector(`#floatingPhone${carId}`).value,
+      startDate: event.target.querySelector(`#floatingStartDate${carId}`).value,
+      endDate: event.target.querySelector(`#floatingEndDate${carId}`).value,
+      email: event.target.querySelector(`#floatingEmail${carId}`).value,
+      message: event.target.querySelector(`#floatingMessage${carId}`).value,
+    };
+
+    let whatsappMessage =
+      `Selected Vehicle: ${encodeURIComponent(formData.vehicle)}%0a` +
+      `Sector: ${encodeURIComponent(formData.sector)}%0a` +
+      `Full Name: ${encodeURIComponent(formData.fullName)}%0a` +
+      `Phone: ${encodeURIComponent(formData.phone)}%0a` +
+      `Date of Arrival: ${encodeURIComponent(formData.startDate)}%0a` +
+      `Date of Departure: ${encodeURIComponent(formData.endDate)}%0a` +
+      `Email: ${encodeURIComponent(formData.email)}%0a` +
+      `Additional Instructions: ${encodeURIComponent(formData.message)}`;
+
+    let whatsappUrl = `https://wa.me/919797231194?text=${whatsappMessage}`;
+    window.open(whatsappUrl, '_blank').focus();
+  }
 });
 
 AOS.init({

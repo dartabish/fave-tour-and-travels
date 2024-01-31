@@ -8,7 +8,8 @@
 
 .cab-content {
   color: white;
-  gap: 1rem;
+  gap: 5px;
+  padding: 10px;
 }
 
 .cars {
@@ -69,7 +70,12 @@
   padding: 7px;
 }
 
-.book {
+.hero-explore {
+  transition: background-color 0.3s !important;
+}
+
+.book,
+.send-enquiry {
   padding: 10px 20px;
   font-size: 1em;
   color: #fff;
@@ -79,7 +85,9 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-.book:hover {
-  background-color: slategrey;
+
+.book:hover,
+.send-enquiry:hover {
+  background-color: var(--hover-accent);
   color: white;
 }
