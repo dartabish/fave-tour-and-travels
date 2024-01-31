@@ -21,6 +21,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
   </head>
   <body>
     <!-- Navbar -->
@@ -108,26 +112,25 @@
         <h1 data-aos="fade-up" data-aos-delay="300">
           Your Dream Destination is Just a Tour Package Away!
         </h1>
-       <a
-          data-aos="fade-up"
-          data-aos-delay="600"
-          href="#package-cards"
-          class="btn hero-explore"
-          >Explore
-        </a> 
-     
+        <a href="#package-cards" class="hero-explore">Explore </a>
       </div>
     </section>
     <br />
     <br />
 
     <!-- Package Container -->
-    <section id="package-cards" class="package-cards">
+    <section
+      id="package-cards"
+      class="package-cards"
+      data-aos="fade-up"
+      data-aos-once="true"
+    >
       <h1 class="section-title">Our Packages</h1>
       <div class="package-card-container"></div>
     </section>
     <br />
     <br />
+
     <!----------------------------------- FOOTER SECTION --------------------------------->
     <footer class="footer-distributed pt-4 pb-3 ps-1 pe-1">
       <div class="d-md-flex justify-content-around">
@@ -197,5 +200,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   </body>
 </html>

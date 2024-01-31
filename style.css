@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @font-face {
-  font-family: 'Ruthie';
-  src: url('./assets/Ruthie-Regular.ttf') format('truetype');
-}
-@font-face {
   font-family: 'Sketsa';
   src: url('./Sketsaramadhan-nRLAO.otf') format('opentype');
 }
@@ -134,6 +130,7 @@ video {
 .hero-explore,
 #hero-explore,
 #learn-more {
+  border-radius: 0.375rem;
   background-color: var(--bg-primary);
   color: white;
   transition: background-color 0.3s;

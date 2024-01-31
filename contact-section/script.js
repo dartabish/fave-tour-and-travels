@@ -1,8 +1,28 @@
-import { addNavBg } from '../script.js';
+function addNavBg() {
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    let favHeight;
+    var scrollPosition = window.scrollY;
+    var screenWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    if (screenWidth <= 998) {
+      favHeight = 100;
+    } else {
+      favHeight = 400;
+    }
+    if (scrollPosition > favHeight) {
+      navbar.style.background = 'darkslategrey ';
+    } else {
+      navbar.style.backgroundColor = 'transparent';
+    }
+  });
+}
 
-// Get the user's location using Geolocation API
+addNavBg();
+
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-
 function successCallback(position) {
   // Update the iframe source with the user's current location
   var iframe = document.getElementById('mapIframe');
@@ -27,20 +47,21 @@ function callPhoneNumber(phoneNumber) {
   window.location.href = 'tel:' + phoneNumber;
 }
 
-function sendToWhatsApp() {
-  // Get form data
-  var firstName = document.getElementById('firstName').value;
-  var lastName = document.getElementById('lastName').value;
+let form = document.getElementById('contact-form');
+console.log(form);
+
+document.getElementById('contact-form').addEventListener('submit', e => {
+  event.preventDefault();
+
+  var fullName = document.getElementById('full-name').value;
   var email = document.getElementById('email').value;
   var phone = document.getElementById('phone').value;
   var message = document.getElementById('message').value;
 
   var whatsappMessage =
-    'New Inquiry from Tour and Travel Website\n\n' +
+    'New Inquiry for Fave Tour And and Travels from:\n' +
     'Name: ' +
-    firstName +
-    ' ' +
-    lastName +
+    fullName +
     '\n' +
     'Email: ' +
     email +
@@ -57,4 +78,4 @@ function sendToWhatsApp() {
 
   // Open WhatsApp link in a new tab
   window.open(whatsappLink, '_blank');
-}
+});

@@ -1,6 +1,5 @@
 import PhotoSwipeLightbox from './photoswipe/dist/photoswipe-lightbox.esm.js';
-
-export function addNavBg() {
+function addNavBg() {
   window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
     let favHeight;
@@ -114,3 +113,12 @@ new TypeIt('.hero-one-liner', {
   strings: 'Crafting journeys, not just trips ',
   speed: 100,
 }).go();
+
+AOS.init({
+  duration: 800,
+  once: true,
+  useClassNames: true,
+  offset: 100,
+  delay: 200,
+  easing: 'ease-in',
+});

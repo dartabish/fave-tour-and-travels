@@ -1,5 +1,3 @@
-// import { addNavBg } from '../script.js';
-
 const carsContainer = document.querySelector('.cars-container');
 const carCollection = [
   {
@@ -88,6 +86,30 @@ const carCollection = [
   },
 ];
 
+function addNavBg() {
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    let favHeight;
+    var scrollPosition = window.scrollY;
+    var screenWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    if (screenWidth <= 998) {
+      favHeight = 100;
+    } else {
+      favHeight = 500;
+    }
+    if (scrollPosition > favHeight) {
+      navbar.style.background = 'darkslategrey ';
+    } else {
+      navbar.style.backgroundColor = 'transparent';
+    }
+  });
+}
+
+addNavBg();
+
 // Rendering car cards
 carCollection.forEach(car => {
   let card = document.createElement('div');
@@ -116,7 +138,7 @@ carCollection.forEach(car => {
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal${car.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog ">
                 <div class="modal-content p-4">
                     <div class="d-flex justify-content-between">
                         <h4>Your Booking Details</h4>
@@ -252,10 +274,4 @@ carsContainer.addEventListener('submit', function (event) {
     let whatsappUrl = `https://wa.me/919797231194?text=${whatsappMessage}`;
     window.open(whatsappUrl, '_blank').focus();
   }
-});
-
-AOS.init({
-  duration: 800,
-  offset: 150,
-  once: true,
 });

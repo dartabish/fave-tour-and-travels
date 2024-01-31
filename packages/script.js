@@ -1,7 +1,28 @@
-/* import { addNavBg } from '../script.js'; */
-/* addNavBg(); */
-const packageCardsContainer = document.querySelector('.package-card-container');
+function addNavBg() {
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    let favHeight;
+    var scrollPosition = window.scrollY;
+    var screenWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    if (screenWidth <= 998) {
+      favHeight = 100;
+    } else {
+      favHeight = 500;
+    }
+    if (scrollPosition > favHeight) {
+      navbar.style.background = 'darkslategrey ';
+    } else {
+      navbar.style.backgroundColor = 'transparent';
+    }
+  });
+}
 
+addNavBg();
+
+const packageCardsContainer = document.querySelector('.package-card-container');
 const tourPackages = [
   {
     id: 1,
@@ -381,4 +402,13 @@ bookBtns.forEach(btn => {
     let url = `https://wa.me/917780846177?text=Hi, I want to book the ${selectedPackage}`;
     window.open(url, '_blank').focus();
   });
+});
+
+AOS.init({
+  duration: 800,
+  once: true,
+  useClassNames: true,
+  offset: 100,
+  delay: 200,
+  easing: 'ease-in',
 });
