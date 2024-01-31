@@ -20,6 +20,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 1rem;
 }
 
 .package-card {
@@ -54,7 +55,7 @@ ul {
 
 .itenary li {
   list-style-type: none;
-  font-size: 20px;
+  font-size: 16px;
   padding: 5px 0;
 }
 
@@ -103,13 +104,17 @@ ul {
   background-color: var(--bg-primary);
   position: relative;
   margin: auto;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   color: #ffffff;
   border-radius: 50%;
   display: grid;
   place-items: center;
   transition: background-color 0.5s, color 0.5s;
+}
+
+.fa-solid {
+  font-size: 20px;
 }
 
 .package-card-amenities-icon:hover {

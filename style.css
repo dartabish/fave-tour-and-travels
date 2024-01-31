@@ -25,6 +25,10 @@
   font-family: 'Varela Round', sans-serif;
 }
 
+.row {
+  --bs-gutter-x: 0 !important;
+}
+
 .section-title {
   color: darkslategray;
   font-weight: 600;

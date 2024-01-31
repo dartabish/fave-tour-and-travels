@@ -223,7 +223,7 @@ const tourPackages = [
   {
     id: 6,
     title: '7 Days Leh-Ladakh Package',
-    img: 'https://images.unsplash.com/photo-1510908072721-6fbd31199630?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: {
       duration: {
         days: 7,
@@ -286,16 +286,16 @@ tourPackages.forEach(tourPackage => {
           <div
             class="package-card-header d-flex justify-content-between align-items-center p-3"
           >
-            <h4 class="package-card-title">${tourPackage.title}</h4>
+            <h5 class="package-card-title">${tourPackage.title}</h5>
             <div class="duration d-flex gap-3">
-              <h4 class="days d-flex flex-column align-items-center">
+              <h6 class="days d-flex flex-column align-items-center">
                 <span>${tourPackage.details.duration.days}</span>
                 <span>Days</span>
-              </h4>
-              <h4 class="nights d-flex flex-column align-items-center">
+              </h6>
+              <h6 class="nights d-flex flex-column align-items-center">
                 <span>${tourPackage.details.duration.nights}</span>
                 <span>Nights</span>
-              </h4>
+              </h6>
             </div>
           </div>
           
@@ -304,7 +304,7 @@ tourPackages.forEach(tourPackage => {
           >
             <li>
               <div class="package-card-amenities-icon" title="Meals">
-                <i class="fa-solid fa-cutlery fa-2x"></i>
+                <i class="fa-solid fa-cutlery"></i>
               </div>
             </li>
             <li>
@@ -312,12 +312,12 @@ tourPackages.forEach(tourPackage => {
                 class="package-card-amenities-icon"
                 title="3 & 4 Star Hotels"
               >
-                <i class="fa-solid fa-hotel fa-2x"></i>
+                <i class="fa-solid fa-hotel"></i>
               </div>
             </li>
             <li>
               <div class="package-card-amenities-icon" title="Transportation">
-                <i class="fa-solid fa-cab fa-2x"></i>
+                <i class="fa-solid fa-cab"></i>
               </div>
             </li>
           </ul>
@@ -337,7 +337,7 @@ tourPackages.forEach(tourPackage => {
                     aria-expanded="false"
                     aria-controls="itenary-${tourPackage.id}"
                   >
-                    <h2 class="">Itenary</h2>
+                    <h5 class="">Itenary</h5>
                   </button>
                 </h2>
                 <div
