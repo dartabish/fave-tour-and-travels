@@ -22,7 +22,6 @@ function addNavBg() {
 
 addNavBg();
 
-const packageCardsContainer = document.querySelector('.package-card-container');
 const tourPackages = [
   {
     id: 1,
@@ -43,7 +42,7 @@ const tourPackages = [
         day2: {
           id: 2,
           title: 'Day 2',
-          description: 'City tour shopping and departure',
+          description: 'Gift shopping and departure',
         },
       },
     },
@@ -74,7 +73,7 @@ const tourPackages = [
           id: 3,
           title: 'Day 3',
           description:
-            'Srinagar to Gulmarg to Srinagar | Night Stay at Srinagar Hotel',
+            'Srinagar to Pahalgam to Srinagar | Night Stay at Srinagar Hotel',
         },
         day4: {
           id: 4,
@@ -177,7 +176,7 @@ const tourPackages = [
         day8: {
           id: 8,
           title: 'Day 8',
-          description: 'Shopping and Departure',
+          description: 'Gift shopping and Departure',
         },
       },
     },
@@ -269,7 +268,7 @@ const tourPackages = [
     },
   },
 ];
-
+const packageCardsContainer = document.querySelector('.package-card-container');
 tourPackages.forEach(tourPackage => {
   const packageCard = document.createElement('div');
   packageCard.className = 'package-card';
