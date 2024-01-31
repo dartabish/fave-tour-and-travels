@@ -275,3 +275,12 @@ carsContainer.addEventListener('submit', function (event) {
     window.open(whatsappUrl, '_blank').focus();
   }
 });
+
+AOS.init({
+  duration: 800,
+  once: true,
+  useClassNames: true,
+  offset: 100,
+  delay: 200,
+  easing: 'ease-in',
+});
