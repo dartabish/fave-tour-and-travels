@@ -267,6 +267,143 @@ const tourPackages = [
       },
     },
   },
+  {
+    id: 7,
+    title: 'Gurez Valley Exploration',
+    img: 'https://images.unsplash.com/photo-1467541473380-93479a5a3ffa?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    details: {
+      duration: {
+        days: 5,
+        nights: 4,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1',
+          description: ' Arrival in Gurez, check-in to hotel',
+        },
+        day2: {
+          id: 2,
+          title: 'Day 2',
+          description: ' Explore Dawar, Tulail Valley',
+        },
+        day3: {
+          id: 3,
+          title: 'Day 3',
+          description: 'Visit Habba Khatoon Peak, Sheikh Baba Behram Shah Shrine',
+        },
+        day4: {
+          id: 4,
+          title: 'Day 4',
+          description: 'Trek to Trunkhol Lake',
+        },
+        day5: {
+          id: 5,
+          title: 'Day 5',
+          description: 'Departure',
+        } 
+      },
+    },
+  },
+  {
+    id: 8,
+    title: ' Bangus Valley Adventure',
+    img: 'https://images.unsplash.com/photo-1422466654108-5e533f591881?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    details: {
+      duration: {
+        days: 2,
+        nights: 1,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1',
+          description: ' Arrival in Bangus Valley and night camping in green meadows',
+        },
+        day2: {
+          id: 2,
+          title: 'Day 2',
+          description: 'Departure ',
+        } 
+      },
+    },
+  },
+  {
+    id: 9,
+    title: ' Teetwal Cultural Experience',
+    img: 'https://www.awazthevoice.in/upload/news/1658067780ruins.PNG',
+    details: {
+      duration: {
+        days: 5,
+        nights: 4,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1',
+          description: '  Arrive in Teetwal, explore the village',
+        },
+        day2: {
+          id: 2,
+          title: 'Day 2',
+          description: 'Visit Tithwal Fort, interact with locals',
+        },
+        day3: {
+          id: 3,
+          title: 'Day 3',
+          description: 'Trek to Tum Khan',
+        },
+        day4: {
+          id: 4,
+          title: 'Day 4',
+          description: 'Experience traditional Kashmiri cuisin',
+        },
+        day5: {
+          id: 5,
+          title: 'Day 5',
+          description: 'Departure',
+        },  
+      },
+    },
+  },
+  {
+    id: 10,
+    title: ' Karen Sector Discovery',
+    img: 'https://flypakistan.pk/assets/img/blog/keran.jpg',
+    details: {
+      duration: {
+        days: 5,
+        nights: 4,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1',
+          description: ' Arrive in Keran, check-in to hotel',
+        },
+        day2: {
+          id: 2,
+          title: 'Day 2',
+          description: 'Explore Shalbatoo, enjoy river views',
+        },
+        day3: {
+          id: 3,
+          title: 'Day 3',
+          description: 'Visit Kishan Ganga River, Nukus',
+        },
+        day4: {
+          id: 4,
+          title: 'Day 4',
+          description: 'Trek to Habba Khatoon Peak',
+        },
+        day5: {
+          id: 5,
+          title: 'Day 5',
+          description: 'Departure',
+        },  
+      },
+    },
+  },
 ];
 const packageCardsContainer = document.querySelector('.package-card-container');
 tourPackages.forEach(tourPackage => {
