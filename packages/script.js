@@ -26,7 +26,7 @@ const tourPackages = [
   {
     id: 1,
     title: '2-Day Kashmir Package',
-    img: 'https://images.unsplash.com/photo-1631693557787-26b992d4c092?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: '../assets/packages/package-1.jpg',
     details: {
       duration: {
         days: 2,
@@ -50,7 +50,7 @@ const tourPackages = [
   {
     id: 2,
     title: '4-Day Kashmir Package',
-    img: 'https://images.unsplash.com/photo-1644979623216-8229a2686299?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: '../assets/packages/package-2.jpg',
     details: {
       duration: {
         days: 4,
@@ -86,7 +86,7 @@ const tourPackages = [
   {
     id: 3,
     title: '6-Day Kashmir Package',
-    img: 'https://images.unsplash.com/photo-1622642897052-9410411a798a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: '../assets/packages/package-3.jpg',
     details: {
       duration: {
         days: 6,
@@ -130,7 +130,7 @@ const tourPackages = [
   {
     id: 4,
     title: '8-Day Kashmir Package',
-    img: 'https://images.unsplash.com/photo-1615478647651-e0716bcdab31?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: '../assets/packages/package-4.jpg',
     details: {
       duration: {
         days: 8,
@@ -184,7 +184,7 @@ const tourPackages = [
   {
     id: 5,
     title: '5 Days Leh-Ladakh Package',
-    img: 'https://images.unsplash.com/photo-1510908072721-6fbd31199630?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: '../assets/packages/package-5.jpg',
     details: {
       duration: {
         days: 5,
@@ -222,7 +222,7 @@ const tourPackages = [
   {
     id: 6,
     title: '7 Days Leh-Ladakh Package',
-    img: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: '../assets/packages/package-6.jpg',
     details: {
       duration: {
         days: 7,
@@ -270,7 +270,7 @@ const tourPackages = [
   {
     id: 7,
     title: 'Gurez Valley Exploration',
-    img: 'https://images.unsplash.com/photo-1467541473380-93479a5a3ffa?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: '../assets/packages/package-10.jpg',
     details: {
       duration: {
         days: 5,
@@ -308,7 +308,7 @@ const tourPackages = [
   {
     id: 8,
     title: ' Bangus Valley Adventure',
-    img: 'https://images.unsplash.com/photo-1422466654108-5e533f591881?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: '../assets/packages/package-9.jpg',
     details: {
       duration: {
         days: 2,
@@ -331,7 +331,7 @@ const tourPackages = [
   {
     id: 9,
     title: ' Teetwal Cultural Experience',
-    img: 'https://www.awazthevoice.in/upload/news/1658067780ruins.PNG',
+    img: '../assets/packages/package-8.png',
     details: {
       duration: {
         days: 5,
