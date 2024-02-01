@@ -184,7 +184,7 @@ const tourPackages = [
   {
     id: 5,
     title: '5 Days Leh-Ladakh Package',
-    img: '../assets/packages/package-5.jpg',
+    img: '../assets/packages/package-5.jpeg',
     details: {
       duration: {
         days: 5,
@@ -222,7 +222,7 @@ const tourPackages = [
   {
     id: 6,
     title: '7 Days Leh-Ladakh Package',
-    img: '../assets/packages/package-6.jpg',
+    img: '../assets/packages/package-6.jpeg',
     details: {
       duration: {
         days: 7,
