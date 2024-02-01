@@ -451,29 +451,31 @@ video {
 
 .reviews-swiper {
   width: 90%;
+  height: 300px;
 }
 
 .reviews-slide {
-  text-align: center;
   display: flex !important;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   border-radius: 15px;
   font-size: 18px;
-  background-color: #f0f9ff;
+  background-color: var(--bg-accent);
   padding: 10px;
 }
 
 .review-text {
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   padding: 10px;
   font-size: 15px;
   line-height: 2;
   color: #f0f9ff;
-  background-color: #083149;
-  max-height: 200px;
+  background-color: var(--bg-primary);
+  height: 100%;
   overflow: auto;
+  display: flex;
+  margin-bottom: 4px;
 }
 
 .reviewer-profile {

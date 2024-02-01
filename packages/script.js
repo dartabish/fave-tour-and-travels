@@ -408,6 +408,5 @@ AOS.init({
   once: true,
   useClassNames: true,
   offset: 100,
-  delay: 200,
   easing: 'ease-in',
 });
