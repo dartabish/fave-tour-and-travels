@@ -79,3 +79,11 @@ document.getElementById('contact-form').addEventListener('submit', e => {
   // Open WhatsApp link in a new tab
   window.open(whatsappLink, '_blank');
 });
+
+AOS.init({
+  duration: 800,
+  once: true,
+  useClassNames: true,
+  offset: 100,
+  easing: 'ease-in',
+});

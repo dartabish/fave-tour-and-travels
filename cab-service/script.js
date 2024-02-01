@@ -279,8 +279,6 @@ carsContainer.addEventListener('submit', function (event) {
 AOS.init({
   duration: 800,
   once: true,
-  useClassNames: true,
   offset: 100,
-  delay: 200,
   easing: 'ease-in',
 });

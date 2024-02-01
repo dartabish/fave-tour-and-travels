@@ -196,7 +196,6 @@ const reviews = [
 ];
 
 const testimonialContainer = document.querySelector('.review-cards-container');
-console.log(testimonialContainer);
 reviews.forEach(review => {
   const reviewCard = document.createElement('div');
   reviewCard.className = 'swiper-slide reviews-slide';
