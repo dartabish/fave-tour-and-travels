@@ -168,8 +168,8 @@ carCollection.forEach(car => {
                             </select>
                             <label for="floatingSector${car.id}">Sector</label>
                         </div>
-                        <div class="row ps-2 pe-2">
-                              <div class="form-floating mb-2 col p-1">
+                        <div class="row gap-2">
+                              <div class="form-floating mb-2 col ">
                                 <input
                                     type="date"
                                     name="Start Date"
@@ -179,7 +179,7 @@ carCollection.forEach(car => {
                                     />
                                <label for="floatingStartDate${car.id}">Date of Arrival</label>
                               </div>
-                              <div class="form-floating mb-2 col p-1">
+                              <div class="form-floating mb-2 col ">
                                   <input
                                     type="date"
                                     name="End Date"

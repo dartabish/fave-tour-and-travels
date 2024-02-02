@@ -19,7 +19,6 @@ function addNavBg() {
     }
   });
 }
-
 addNavBg();
 
 const tourPackages = [
@@ -76,14 +75,12 @@ const tourPackages = [
         day2: {
           id: 2,
           title: 'Day 2',
-          description:
-            'Srinagar-Pahalgam-Srinagar',
+          description: 'Srinagar-Pahalgam-Srinagar',
         },
         day3: {
           id: 3,
           title: 'Day 3',
-          description:
-            'Srinagar-Gulmarg-Srinagar',
+          description: 'Srinagar-Gulmarg-Srinagar',
         },
         day4: {
           id: 4,
@@ -132,7 +129,7 @@ const tourPackages = [
         day5: {
           id: 5,
           title: 'Day 5',
-          description: 'Srinagar-SightSeeing | Stay in Srinagar',
+          description: 'Srinagar Sightseeing | Stay in Srinagar',
         },
         day6: {
           id: 6,
@@ -156,7 +153,7 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-          'Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
+            'Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
         },
         day2: {
           id: 2,
@@ -205,7 +202,7 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-            'Airport Pick-up | Srinagar SightSeeing | Stay in Srinagar',
+            'Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
         },
         day2: {
           id: 2,
@@ -344,7 +341,52 @@ const tourPackages = [
         day1: {
           id: 1,
           title: 'Day 1',
-          description: ' Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
+          description:
+            ' Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
+        },
+        day2: {
+          id: 2,
+          title: 'Day 2',
+          description: 'Srinagar to Gurez | Stay in Gurez',
+        },
+        day3: {
+          id: 3,
+          title: 'Day 3',
+          description: 'Gurez local sightseeing',
+        },
+        day4: {
+          id: 4,
+          title: 'Day 4',
+          description: 'Gurez to Tulail | Return to Gurez',
+        },
+        day5: {
+          id: 5,
+          title: 'Day 5',
+          description: 'Gurez to Srinagar | Stay in Srinagar',
+        },
+        day6: {
+          id: 6,
+          title: 'Day 6',
+          description: 'On-time transfer to Srinagar Airport',
+        },
+      },
+    },
+  },
+  {
+    id: 9,
+    title: 'Customized Package',
+    img: '../assets/packages/custom-package.jpeg',
+    details: {
+      duration: {
+        days: 6,
+        nights: 5,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1',
+          description:
+            ' Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
         },
         day2: {
           id: 2,
@@ -374,8 +416,8 @@ const tourPackages = [
       },
     },
   },
-
 ];
+
 const packageCardsContainer = document.querySelector('.package-card-container');
 tourPackages.forEach(tourPackage => {
   const packageCard = document.createElement('div');
@@ -481,6 +523,48 @@ tourPackages.forEach(tourPackage => {
         </div>
    
   `;
+  if (tourPackage.title === 'Customized Package') {
+    packageCard.className = 'package-card custom-package-card align-self-start';
+    packageCard.innerHTML = `
+        <div class="package-card-banner">
+          <img src="${tourPackage.img}" alt="${tourPackage.title}" />
+        </div>
+        <div class="custom-package-details p-3">
+            <h4 class="">Customised Package</h4>
+        </div>
+        <ul
+            class="package-card-amenities d-flex justify-content-around pt-2 pb-2 mb-3"
+          >
+            <li>
+              <div class="package-card-amenities-icon" title="Meals">
+                <i class="fa-solid fa-cutlery"></i>
+              </div>
+            </li>
+            <li>
+              <div
+                class="package-card-amenities-icon"
+                title="3 & 4 Star Hotels"
+              >
+                <i class="fa-solid fa-hotel"></i>
+              </div>
+            </li>
+            <li>
+              <div class="package-card-amenities-icon" title="Transportation">
+                <i class="fa-solid fa-cab"></i>
+              </div>
+            </li>
+          </ul>
+
+          <div
+            class="package-card-booking ps-3 pe-3 d-flex justify-content-center"
+          >
+            <button class="book-package w-100" id="${tourPackage.id}">
+              Book Now
+            </button>
+          </div>
+
+    `;
+  }
   packageCardsContainer.appendChild(packageCard);
 });
 

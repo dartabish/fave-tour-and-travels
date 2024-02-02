@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
 @font-face {
   font-family: 'Sketsa';
   src: url('./Sketsaramadhan-nRLAO.otf') format('opentype');
@@ -22,7 +22,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Varela', sans-serif;
 }
 
 .row {
@@ -107,11 +107,13 @@ body {
 /* Hero Section------  -----Hero Section----------------Hero Section-------------Hero Section---------------------- */
 .hero {
   position: relative;
+
   height: 100dvh;
 }
 
 .hero-content {
-  height: 85%;
+  width: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,7 +314,7 @@ video {
 /* Special Offers */
 
 .special-offers {
-  height: 50vh;
+  height: 60vh;
 }
 
 .offer-container {
@@ -327,6 +329,7 @@ video {
   background-size: cover;
   position: relative;
 }
+
 .offer-container:after {
   content: '';
   position: absolute;
@@ -334,7 +337,7 @@ video {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .offer-details {
@@ -342,9 +345,34 @@ video {
   z-index: 1;
 }
 
+.offer-punch-container {
+  background: hsla(33, 100%, 53%, 1);
+
+  background: linear-gradient(
+    180deg,
+    hsla(33, 100%, 53%, 1) 0%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    180deg,
+    hsla(33, 100%, 53%, 1) 0%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    180deg,
+    hsla(33, 100%, 53%, 1) 0%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ff930f", endColorstr="#fff95b", GradientType=1 );
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
 .offer-details h1 {
-  color: #198754;
-  text-shadow: 2px 2px 4px rgb(2, 43, 2);
+  text-shadow: 2px 2px 4px rgb(46, 117, 46);
 }
 
 .offer-details p {
@@ -413,10 +441,6 @@ video {
   .packages::after,
   .cabs::after {
     border-radius: 15px;
-  }
-
-  .offer-details {
-    width: 60%;
   }
 }
 

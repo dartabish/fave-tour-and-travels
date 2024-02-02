@@ -20,7 +20,6 @@ function addNavBg() {
     }
   });
 }
-
 addNavBg();
 
 var destinationsSwiper = new Swiper('.destinations-swiper', {
@@ -56,13 +55,13 @@ const lightbox = new PhotoSwipeLightbox({
   tapAction: 'close',
   showHideAnimationType: 'zoom',
   closeAnimationDuration: '0000',
+  loop: false,
 
   pswpModule: () => import('./photoswipe/dist/photoswipe.esm.js'),
 });
 lightbox.init();
 
 var gallerySwiper = new Swiper('.gallery-swiper', {
-  loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -93,7 +92,6 @@ var gallerySwiper = new Swiper('.gallery-swiper', {
 });
 
 // About section
-
 const container = document.getElementById('animation-container');
 const animation = lottie.loadAnimation({
   container: container,
