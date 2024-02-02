@@ -23,9 +23,9 @@ function addNavBg() {
       favHeight = 500;
     }
     if (scrollPosition > favHeight) {
-      navbar.style.background = 'darkslategrey ';
+      navbar.classList.add('scrolled');
     } else {
-      navbar.style.backgroundColor = 'transparent';
+      navbar.classList.remove('scrolled');
     }
   });
 }

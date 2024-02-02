@@ -56,6 +56,7 @@ body {
 
 .navbar-toggler {
   border: none !important;
+  padding: 0 !important;
 }
 
 .navbar a {
@@ -321,7 +322,6 @@ body {
 }
 
 /* Special Offers */
-
 .special-offers {
   height: 60vh;
 }
