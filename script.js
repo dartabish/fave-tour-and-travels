@@ -255,6 +255,6 @@ let reviewsSwiper = new Swiper('.reviews-swiper', {
 const offerBtn = document.querySelector('.special-btn');
 offerBtn.addEventListener('click', e => {
   const message = `Hi,I want to book the Special Gulmarg Offer!`;
-  let whatsappUrl = `https://wa.me/919797231194?text=${message}`;
+  let whatsappUrl = `https://wa.me/917780938501?text=${message}`;
   window.open(whatsappUrl, '_blank').focus();
 });

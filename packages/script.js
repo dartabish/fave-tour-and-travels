@@ -334,7 +334,7 @@ const tourPackages = [
   {
     id: 8,
     title: 'Gurez Valley Exploration',
-    img: '../assets/packages/package-10.jpg',
+    img: '../assets/packages/package-10.png',
     details: {
       duration: {
         days: 6,
@@ -374,105 +374,7 @@ const tourPackages = [
       },
     },
   },
-  {
-    id: 9,
-    title: ' Bangus Valley Adventure',
-    img: '../assets/packages/package-9.jpg',
-    details: {
-      duration: {
-        days: 2,
-        nights: 1,
-      },
-      tourPlan: {
-        day1: {
-          id: 1,
-          title: 'Day 1',
-          description: ' Arrival in Bangus Valley and night camping in green meadows',
-        },
-        day2: {
-          id: 2,
-          title: 'Day 2',
-          description: 'Departure ',
-        } 
-      },
-    },
-  },
-  {
-    id: 10,
-    title: ' Teetwal Cultural Experience',
-    img: '../assets/packages/package-8.png',
-    details: {
-      duration: {
-        days: 5,
-        nights: 4,
-      },
-      tourPlan: {
-        day1: {
-          id: 1,
-          title: 'Day 1',
-          description: '  Arrive in Teetwal, explore the village',
-        },
-        day2: {
-          id: 2,
-          title: 'Day 2',
-          description: 'Visit Tithwal Fort, interact with locals',
-        },
-        day3: {
-          id: 3,
-          title: 'Day 3',
-          description: 'Trek to Tum Khan',
-        },
-        day4: {
-          id: 4,
-          title: 'Day 4',
-          description: 'Experience traditional Kashmiri cuisin',
-        },
-        day5: {
-          id: 5,
-          title: 'Day 5',
-          description: 'Departure',
-        },  
-      },
-    },
-  },
-  {
-    id: 11,
-    title: ' Karen Sector Discovery',
-    img: '../assets/packages/package-12.jpg',
-    details: {
-      duration: {
-        days: 5,
-        nights: 4,
-      },
-      tourPlan: {
-        day1: {
-          id: 1,
-          title: 'Day 1',
-          description: ' Arrive in Keran, check-in to hotel',
-        },
-        day2: {
-          id: 2,
-          title: 'Day 2',
-          description: 'Explore Shalbatoo, enjoy river views',
-        },
-        day3: {
-          id: 3,
-          title: 'Day 3',
-          description: 'Visit Kishan Ganga River, Nukus',
-        },
-        day4: {
-          id: 4,
-          title: 'Day 4',
-          description: 'Trek to Habba Khatoon Peak',
-        },
-        day5: {
-          id: 5,
-          title: 'Day 5',
-          description: 'Departure',
-        },  
-      },
-    },
-  },
+
 ];
 const packageCardsContainer = document.querySelector('.package-card-container');
 tourPackages.forEach(tourPackage => {
@@ -604,7 +506,7 @@ bookBtns.forEach(btn => {
         break;
     }
 
-    let url = `https://wa.me/917780846177?text=Hi, I want to book the ${selectedPackage}`;
+    let url = `https://wa.me/917780938501?text=Hi, I want to book the ${selectedPackage}`;
     window.open(url, '_blank').focus();
   });
 });

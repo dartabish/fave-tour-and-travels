@@ -74,7 +74,7 @@ document.getElementById('contact-form').addEventListener('submit', e => {
 
   // Construct WhatsApp link
   var whatsappLink =
-    'https://wa.me/919797231194?text=' + encodeURIComponent(whatsappMessage);
+    'https://wa.me/917780938501?text=' + encodeURIComponent(whatsappMessage);
 
   // Open WhatsApp link in a new tab
   window.open(whatsappLink, '_blank');
