@@ -1,4 +1,13 @@
 import PhotoSwipeLightbox from './photoswipe/dist/photoswipe-lightbox.esm.js';
+document.addEventListener('DOMContentLoaded', () => {
+  let video = document.querySelector('.background-video');
+  video.oncanplaythrough = function () {
+    video.play();
+    video.style.display = 'block';
+    document.querySelector('.video-placeholder').style.display = 'none';
+  };
+});
+
 function addNavBg() {
   window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
@@ -98,7 +107,7 @@ const animation = lottie.loadAnimation({
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: './assets/Animation - 1706528908157.json',
+  path: './assets/landing-page/about-us.json',
 });
 
 new TypeIt('#hero-punchline', {
