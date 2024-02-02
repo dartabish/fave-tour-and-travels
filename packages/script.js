@@ -13,9 +13,9 @@ function addNavBg() {
       favHeight = 500;
     }
     if (scrollPosition > favHeight) {
-      navbar.style.background = 'darkslategrey ';
+      navbar.classList.add('scrolled');
     } else {
-      navbar.style.backgroundColor = 'transparent';
+      navbar.classList.remove('scrolled');
     }
   });
 }
@@ -244,7 +244,7 @@ const tourPackages = [
   },
   {
     id: 6,
-    title: '5 Days Leh-Ladakh Package',
+    title: '5-Day Leh-Ladakh Package',
     img: '../assets/packages/package-6.jpg',
     details: {
       duration: {
@@ -282,7 +282,7 @@ const tourPackages = [
   },
   {
     id: 7,
-    title: '7 Days Leh-Ladakh Package',
+    title: `7-Day Leh-Ladakh Package`,
     img: '../assets/packages/package-7.jpg',
     details: {
       duration: {
@@ -330,7 +330,7 @@ const tourPackages = [
   },
   {
     id: 8,
-    title: 'Gurez Valley Exploration',
+    title: 'Gurez Valley Exploration Package',
     img: '../assets/packages/package-10.png',
     details: {
       duration: {
@@ -424,7 +424,6 @@ tourPackages.forEach(tourPackage => {
   packageCard.className = 'package-card';
   packageCard.id = tourPackage.id;
   packageCard.innerHTML = `
-  
         <div class="package-card-banner">
           <img src="${tourPackage.img}" alt="${tourPackage.title}" />
         </div>
@@ -523,48 +522,6 @@ tourPackages.forEach(tourPackage => {
         </div>
    
   `;
-  if (tourPackage.title === 'Customized Package') {
-    packageCard.className = 'package-card custom-package-card align-self-start';
-    packageCard.innerHTML = `
-        <div class="package-card-banner">
-          <img src="${tourPackage.img}" alt="${tourPackage.title}" />
-        </div>
-        <div class="custom-package-details p-3">
-            <h4 class="">Customised Package</h4>
-        </div>
-        <ul
-            class="package-card-amenities d-flex justify-content-around pt-2 pb-2 mb-3"
-          >
-            <li>
-              <div class="package-card-amenities-icon" title="Meals">
-                <i class="fa-solid fa-cutlery"></i>
-              </div>
-            </li>
-            <li>
-              <div
-                class="package-card-amenities-icon"
-                title="3 & 4 Star Hotels"
-              >
-                <i class="fa-solid fa-hotel"></i>
-              </div>
-            </li>
-            <li>
-              <div class="package-card-amenities-icon" title="Transportation">
-                <i class="fa-solid fa-cab"></i>
-              </div>
-            </li>
-          </ul>
-
-          <div
-            class="package-card-booking ps-3 pe-3 d-flex justify-content-center"
-          >
-            <button class="book-package w-100" id="${tourPackage.id}">
-              Book Now
-            </button>
-          </div>
-
-    `;
-  }
   packageCardsContainer.appendChild(packageCard);
 });
 
@@ -587,6 +544,18 @@ bookBtns.forEach(btn => {
         break;
       case '5':
         selectedPackage = tourPackages[4].title;
+        break;
+      case '6':
+        selectedPackage = tourPackages[5].title;
+        break;
+      case '7':
+        selectedPackage = tourPackages[6].title;
+        break;
+      case '8':
+        selectedPackage = tourPackages[7].title;
+        break;
+      case '9':
+        selectedPackage = tourPackages[8].title;
         break;
     }
 

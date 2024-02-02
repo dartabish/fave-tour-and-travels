@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
-@font-face {
-  font-family: 'Sketsa';
-  src: url('./Sketsaramadhan-nRLAO.otf') format('opentype');
-}
 
 :root {
   --primary-color: #669ccb;
@@ -44,11 +40,18 @@ body {
 
 /* ------------------------ */
 /* Nav */
+.navbar {
+  transition: background-color 0.3s ease-in;
+}
+
+.navbar.scrolled {
+  background-color: darkslategrey;
+}
 
 .navbar-brand,
 .footer-brand {
-  font-family: 'Sketsa', sans-serif;
   color: white;
+  font-weight: 900;
 }
 
 .navbar-toggler {
@@ -287,7 +290,6 @@ body {
 .destination-slide {
   position: relative;
   padding-top: 4px;
-  font-family: 'SketsaRamadan';
 }
 
 .destination-img-container {
