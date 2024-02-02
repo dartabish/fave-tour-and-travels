@@ -37,7 +37,7 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
+            'Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
         },
         day2: {
           id: 2,
@@ -52,7 +52,7 @@ const tourPackages = [
         day4: {
           id: 4,
           title: 'Day 4',
-          description: 'OnTime transfer to Srinagar Airport',
+          description: 'On-time transfer to Srinagar Airport',
         },
       },
     },
@@ -71,7 +71,7 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
+            'Airport Pickup | Srinagar Sightseeing | Stay in Srinagar',
         },
         day2: {
           id: 2,
@@ -93,7 +93,7 @@ const tourPackages = [
         day5: {
           id: 5,
           title: 'Day 5',
-          description: 'OnTime transfer to Srinagar Airport',
+          description: 'On-time transfer to Srinagar Airport',
         },
       },
     },
@@ -112,17 +112,17 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
+            'Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
         },
         day2: {
           id: 2,
           title: 'Day 2',
-          description: 'Srinagar-Pahalgam- Stay in Pahalgam',
+          description: 'Srinagar-Pahalgam | Stay in Pahalgam',
         },
         day3: {
           id: 3,
           title: 'Day 3',
-          description: 'Pahalgam-Gulmarg-Stay in Gulmarg',
+          description: 'Pahalgam-Gulmarg | Stay in Gulmarg',
         },
         day4: {
           id: 4,
@@ -132,12 +132,12 @@ const tourPackages = [
         day5: {
           id: 5,
           title: 'Day 5',
-          description: 'Srinagar-SightSeeings-Stay in Srinagar',
+          description: 'Srinagar-SightSeeing | Stay in Srinagar',
         },
         day6: {
           id: 6,
           title: 'Day 6',
-          description: 'OnTime transfer to Srinagar Airport',
+          description: 'On-time transfer to Srinagar Airport',
         },
       },
     },
@@ -156,7 +156,7 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
+          'Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
         },
         day2: {
           id: 2,
@@ -186,7 +186,7 @@ const tourPackages = [
         day7: {
           id: 7,
           title: 'Day 7',
-          description: 'OnTime transfer to Srinagar Airport',
+          description: 'On-time transfer to Srinagar Airport',
         },
       },
     },
@@ -194,7 +194,7 @@ const tourPackages = [
   {
     id: 5,
     title: '8-Day Kashmir Package',
-    img: '../assets/packages/package-4.jpg',
+    img: '../assets/packages/package-5.jpg',
     details: {
       duration: {
         days: 8,
@@ -205,7 +205,7 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
+            'Airport Pick-up | Srinagar SightSeeing | Stay in Srinagar',
         },
         day2: {
           id: 2,
@@ -240,7 +240,7 @@ const tourPackages = [
         day8: {
           id: 8,
           title: 'Day 8',
-          description: 'OnTime transfer to Srinagar Airport',
+          description: 'On-time transfer to Srinagar Airport',
         },
       },
     },
@@ -248,7 +248,7 @@ const tourPackages = [
   {
     id: 6,
     title: '5 Days Leh-Ladakh Package',
-    img: '../assets/packages/package-5.jpg',
+    img: '../assets/packages/package-6.jpg',
     details: {
       duration: {
         days: 5,
@@ -286,7 +286,7 @@ const tourPackages = [
   {
     id: 7,
     title: '7 Days Leh-Ladakh Package',
-    img: '../assets/packages/package-6.jpeg',
+    img: '../assets/packages/package-7.jpg',
     details: {
       duration: {
         days: 7,
