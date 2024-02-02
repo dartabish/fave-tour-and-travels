@@ -25,32 +25,8 @@ addNavBg();
 const tourPackages = [
   {
     id: 1,
-    title: '2-Day Kashmir Package',
-    img: '../assets/packages/package-1.jpg',
-    details: {
-      duration: {
-        days: 2,
-        nights: 1,
-      },
-      tourPlan: {
-        day1: {
-          id: 1,
-          title: 'Day 1',
-          description:
-            'Airport to Gulmarg to Srinagar | Night Stay at Srinagar Hotel',
-        },
-        day2: {
-          id: 2,
-          title: 'Day 2',
-          description: 'Gift shopping and departure',
-        },
-      },
-    },
-  },
-  {
-    id: 2,
     title: '4-Day Kashmir Package',
-    img: '../assets/packages/package-2.jpg',
+    img: '../assets/packages/package-1.jpg',
     details: {
       duration: {
         days: 4,
@@ -61,24 +37,63 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-            'Arrival and Srinagar city tour | Night Stay at Srinagar Hotel',
+            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
+        },
+        day2: {
+          id: 2,
+          title: 'Day 2',
+          description: 'Srinagar-Pahalgam-Srinagar',
+        },
+        day3: {
+          id: 3,
+          title: 'Day 3',
+          description: 'Srinagar-Gulmarg-Srinagar',
+        },
+        day4: {
+          id: 4,
+          title: 'Day 4',
+          description: 'OnTime transfer to Srinagar Airport',
+        },
+      },
+    },
+  },
+  {
+    id: 2,
+    title: '5-Day Kashmir Package',
+    img: '../assets/packages/package-2.jpg',
+    details: {
+      duration: {
+        days: 5,
+        nights: 4,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1',
+          description:
+            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
         },
         day2: {
           id: 2,
           title: 'Day 2',
           description:
-            'Srinagar to Gulmarg to Srinagar | Night Stay at Srinagar Hotel',
+            'Srinagar-Pahalgam-Srinagar',
         },
         day3: {
           id: 3,
           title: 'Day 3',
           description:
-            'Srinagar to Pahalgam to Srinagar | Night Stay at Srinagar Hotel',
+            'Srinagar-Gulmarg-Srinagar',
         },
         day4: {
           id: 4,
           title: 'Day 4',
-          description: 'Gift shopping and departure',
+          description: 'Srinagar-Sonamarg-Srinagar',
+        },
+        day5: {
+          id: 5,
+          title: 'Day 5',
+          description: 'OnTime transfer to Srinagar Airport',
         },
       },
     },
@@ -97,38 +112,87 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-            'Arrival and Transfer to Hotel | Night Stay at Srinagar Hotel',
+            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
         },
         day2: {
           id: 2,
           title: 'Day 2',
-          description: 'Srinagar City Tour | Night stay at Srinagar Hotel',
+          description: 'Srinagar-Pahalgam- Stay in Pahalgam',
         },
         day3: {
           id: 3,
           title: 'Day 3',
-          description: 'Sonamarg Day Tour | Night Stay at Srinagar Hotel',
+          description: 'Pahalgam-Gulmarg-Stay in Gulmarg',
         },
         day4: {
           id: 4,
           title: 'Day 4',
-          description: 'Gulmarg Day Tour | Night Stay at Gulmarg Hotel',
+          description: 'Gulmarg-Srinagar',
         },
         day5: {
           id: 5,
           title: 'Day 5',
-          description: 'Gulmarg to Srinagar| Night Stay at Srinagar Hotel',
+          description: 'Srinagar-SightSeeings-Stay in Srinagar',
         },
         day6: {
           id: 6,
           title: 'Day 6',
-          description: 'Gift shopping and departure',
+          description: 'OnTime transfer to Srinagar Airport',
         },
       },
     },
   },
   {
     id: 4,
+    title: '7-Day Kashmir Package',
+    img: '../assets/packages/package-11.jpg',
+    details: {
+      duration: {
+        days: 7,
+        nights: 6,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1',
+          description:
+            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
+        },
+        day2: {
+          id: 2,
+          title: 'Day 2',
+          description: 'Srinagar-Pahalgam',
+        },
+        day3: {
+          id: 3,
+          title: 'Day 3',
+          description: 'In Pahalgam',
+        },
+        day4: {
+          id: 4,
+          title: 'Day 4',
+          description: 'Pahalgam-Gulmarg',
+        },
+        day5: {
+          id: 5,
+          title: 'Day 5',
+          description: 'In Gulmarg',
+        },
+        day6: {
+          id: 6,
+          title: 'Day 6',
+          description: 'Gulmarg-Srinagar',
+        },
+        day7: {
+          id: 7,
+          title: 'Day 7',
+          description: 'OnTime transfer to Srinagar Airport',
+        },
+      },
+    },
+  },
+  {
+    id: 5,
     title: '8-Day Kashmir Package',
     img: '../assets/packages/package-4.jpg',
     details: {
@@ -141,50 +205,50 @@ const tourPackages = [
           id: 1,
           title: 'Day 1',
           description:
-            'Arrival and Transfer to Hotel | Night Stay at Srinagar Hotel',
+            'Airport pickUp-Srinagar SightSeeings-Stay in Srinagar',
         },
         day2: {
           id: 2,
           title: 'Day 2',
-          description: 'Srinagar City Tour | Night stay at Srinagar Hotel',
+          description: 'Srinagar-Sonamarg-Srinagar',
         },
         day3: {
           id: 3,
           title: 'Day 3',
-          description: 'Srinagar to Sonamarg | Night Stay at Sonamarg Hotel',
+          description: 'Srinagar-Pahalgam',
         },
         day4: {
           id: 4,
           title: 'Day 4',
-          description: 'Sonamarg Stay  | Night Stay at Sonamarg Hotel',
+          description: 'In Pahalgam',
         },
         day5: {
           id: 5,
           title: 'Day 5',
-          description: 'Sonamarg to Gulmarg | Night Stay at Gulmarg  Hotel',
+          description: 'Pahalgam-Gulmarg',
         },
         day6: {
           id: 6,
           title: 'Day 6',
-          description: 'Gulmarg to Pahalgam| Night Stay at Pahalgam Hotel',
+          description: 'In Gulmarg',
         },
         day7: {
           id: 7,
           title: 'Day 7',
-          description: 'Pahalgam to Srinagar | Night Stay Srinagar Hotel',
+          description: 'Gulmarg-Srinagar',
         },
         day8: {
           id: 8,
           title: 'Day 8',
-          description: 'Gift shopping and Departure',
+          description: 'OnTime transfer to Srinagar Airport',
         },
       },
     },
   },
   {
-    id: 5,
+    id: 6,
     title: '5 Days Leh-Ladakh Package',
-    img: '../assets/packages/package-5.jpeg',
+    img: '../assets/packages/package-5.jpg',
     details: {
       duration: {
         days: 5,
@@ -220,7 +284,7 @@ const tourPackages = [
     },
   },
   {
-    id: 6,
+    id: 7,
     title: '7 Days Leh-Ladakh Package',
     img: '../assets/packages/package-6.jpeg',
     details: {
@@ -268,7 +332,7 @@ const tourPackages = [
     },
   },
   {
-    id: 7,
+    id: 8,
     title: 'Gurez Valley Exploration',
     img: '../assets/packages/package-10.jpg',
     details: {
@@ -306,7 +370,7 @@ const tourPackages = [
     },
   },
   {
-    id: 8,
+    id: 9,
     title: ' Bangus Valley Adventure',
     img: '../assets/packages/package-9.jpg',
     details: {
@@ -329,7 +393,7 @@ const tourPackages = [
     },
   },
   {
-    id: 9,
+    id: 10,
     title: ' Teetwal Cultural Experience',
     img: '../assets/packages/package-8.png',
     details: {
@@ -367,9 +431,9 @@ const tourPackages = [
     },
   },
   {
-    id: 10,
+    id: 11,
     title: ' Karen Sector Discovery',
-    img: 'https://flypakistan.pk/assets/img/blog/keran.jpg',
+    img: '../assets/packages/package-12.jpg',
     details: {
       duration: {
         days: 5,
