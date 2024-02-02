@@ -337,35 +337,40 @@ const tourPackages = [
     img: '../assets/packages/package-10.jpg',
     details: {
       duration: {
-        days: 5,
-        nights: 4,
+        days: 6,
+        nights: 5,
       },
       tourPlan: {
         day1: {
           id: 1,
           title: 'Day 1',
-          description: ' Arrival in Gurez, check-in to hotel',
+          description: ' Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
         },
         day2: {
           id: 2,
           title: 'Day 2',
-          description: ' Explore Dawar, Tulail Valley',
+          description: 'Srinagar  to Gurez | Stay in Gurez',
         },
         day3: {
           id: 3,
           title: 'Day 3',
-          description: 'Visit Habba Khatoon Peak, Sheikh Baba Behram Shah Shrine',
+          description: 'Gurez local Sightseeing',
         },
         day4: {
           id: 4,
           title: 'Day 4',
-          description: 'Trek to Trunkhol Lake',
+          description: 'Gurez to Tulail | Return to Gurez',
         },
         day5: {
           id: 5,
           title: 'Day 5',
-          description: 'Departure',
-        } 
+          description: 'Gurez to Srinagar | Stay in Srinagar',
+        },
+        day6: {
+          id: 6,
+          title: 'Day 6',
+          description: 'On-time transfer to Srinagar Airport',
+        },
       },
     },
   },

@@ -138,7 +138,7 @@ carCollection.forEach(car => {
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal${car.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog ">
+            <div class="modal-dialog">
                 <div class="modal-content p-4">
                     <div class="d-flex justify-content-between">
                         <h4>Your Booking Details</h4>
