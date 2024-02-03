@@ -131,9 +131,13 @@ AOS.init({
 const reviews = [
   {
     id: 1,
-    img: './assets/reviews/shakeel.png',
-    fullName: 'Shakeelahmed MA',
-    reviewText: `We came across <strong>Firoz's</strong> number in Google and booked our 3 days trip with them in Kashmir.. <strong>Asif</strong> was very friendly, humble driver. He suggests the place to visit, eat and shop. Asif was patient through out the trip. Highly recommended service if anyone visiting Kashmir.\nThank you <strong>Firoz</strong> and <strong>Asif</strong> for the great service during our Srinagar visit.`,
+    img: './assets/reviews/praveen.png',
+    fullName: 'Praveen Pahwa',
+    reviewText: `Had Nice experience during My Seven days of Family tour of Srinagar.
+    <strong>Mr. Feroz</strong> ji is nice person and is professional in the the services.
+    The Car was neat and clean and well maintained.
+    Our tour driver <strong>Mr Irfan</strong> is also Good person., He was quite informative and was very friendly with kids.
+    Will love to travel with them if I visit again in Kashmir.`,
   },
 
   {
@@ -144,13 +148,11 @@ const reviews = [
   },
   {
     id: 3,
-    img: './assets/reviews/himanshu.jpg',
-    fullName: 'Himanshu Chauhan',
-    reviewText: `Tried to contact the taxi service in Srinagar and luckily found them. I was traveling with my family with two little ones.<strong>Mr Asif Baba</strong> was our driver and he is very punctual in time and very good to drive. They provide a very neat and clean car to us.
-    One more thing not only <strong>Mr Asif Baba</strong>, during my visit I can say that all Kashmiri people are very good at hospitality. They are very polite and especially the people of Pahalgam are very decent.
-    <br>
-    <strong>"Kashmir jannat hai, aur vaha k log Kashmir ko jannat banate hain"</strong>`,
+    img: './assets/reviews/gajapathy.png',
+    fullName: 'Gajapathy N',
+    reviewText: `Based on the online Reviews we spoke with <strong>Mr. Feroze Bhat</strong> and booked Cab from Taxi Service Kashmir for a family trip for 7 days. Our driver  <strong>Mr. Firdous Ahmed Bhat</strong> was with us for our entire trip. He was very courteous, gave tips to bargain  ,very helpful throughout. He really made our trip to Kashmir a memorable one. He was like a family to us and took good care of us. Thankyou.`,
   },
+
   {
     id: 4,
     img: './assets/reviews/sanjay.png',
@@ -166,9 +168,9 @@ const reviews = [
   },
   {
     id: 6,
-    img: './assets/reviews/thangam.png',
-    fullName: 'Thangam Subramaniam',
-    reviewText: `Great Service! Wonderful taxi service. <strong>Asif</strong>, our driver for the trip was really great. He suggested us the best places around and took us to all the places we wanted to visit. Overall a wonderful experience with <strong>Feroze Bhat’s</strong> taxi service.`,
+    img: './assets/reviews/shakeel.png',
+    fullName: 'Shakeelahmed MA',
+    reviewText: `We came across <strong>Firoz's</strong> number in Google and booked our 3 days trip with them in Kashmir.. <strong>Asif</strong> was very friendly, humble driver. He suggests the place to visit, eat and shop. Asif was patient through out the trip. Highly recommended service if anyone visiting Kashmir.\nThank you <strong>Firoz</strong> and <strong>Asif</strong> for the great service during our Srinagar visit.`,
   },
 
   {
@@ -207,12 +209,14 @@ const reviews = [
     fullName: 'Anushi Bisen',
     reviewText: `We had a wonderful trip and our driver <strong>Mr. Irfan</strong> made it even more fun and memorable. He’s very kind and cooperative and was very informative about the places we were going to, he had also suggested us amazing restaurants for lunch and dinner breaks while travelling, we would love to travel with him for our next trip too! Thankyou so much for your amazing service.`,
   },
-
   {
     id: 13,
-    img: './assets/reviews/gajapathy.png',
-    fullName: 'Gajapathy N',
-    reviewText: `Based on the online Reviews we spoke with <strong>Mr. Feroze Bhat</strong> and booked Cab from Taxi Service Kashmir for a family trip for 7 days. Our driver  <strong>Mr. Firdous Ahmed Bhat</strong> was with us for our entire trip. He was very courteous, gave tips to bargain  ,very helpful throughout. He really made our trip to Kashmir a memorable one. He was like a family to us and took good care of us. Thankyou.`,
+    img: './assets/reviews/himanshu.jpg',
+    fullName: 'Himanshu Chauhan',
+    reviewText: `Tried to contact the taxi service in Srinagar and luckily found them. I was traveling with my family with two little ones.<strong>Mr Asif Baba</strong> was our driver and he is very punctual in time and very good to drive. They provide a very neat and clean car to us.
+    One more thing not only <strong>Mr Asif Baba</strong>, during my visit I can say that all Kashmiri people are very good at hospitality. They are very polite and especially the people of Pahalgam are very decent.
+    <br>
+    <strong>"Kashmir jannat hai, aur vaha k log Kashmir ko jannat banate hain"</strong>`,
   },
   {
     id: 14,
@@ -229,6 +233,12 @@ const reviews = [
   },
   {
     id: 16,
+    img: './assets/reviews/thangam.png',
+    fullName: 'Thangam Subramaniam',
+    reviewText: `Great Service! Wonderful taxi service. <strong>Asif</strong>, our driver for the trip was really great. He suggested us the best places around and took us to all the places we wanted to visit. Overall a wonderful experience with <strong>Feroze Bhat’s</strong> taxi service.`,
+  },
+  {
+    id: 17,
     img: './assets/reviews/arvind.png',
     fullName: 'Arvind Singh',
     reviewText: `Thanks to the lucky moment we decided to book Taxi services from <strong>Mr Feroz Bhat</strong>. We booked Taxi for 7 days with them and amazed with their services and dedication throughout the tour.
@@ -236,12 +246,7 @@ const reviews = [
     Thanks a lot <strong>Firoz Bhai</strong> for suggesting us great itinerary and helping to book a nice houseboat. All these at a reasonable cost. We are really grateful to you. God bless you.
     After all I can say that Taxi Services Kashmir deserves for all stars and highly recommend their services for people planning to visit Kashmir. They will take care of you beyond your expectations.`,
   },
-  {
-    id: 17,
-    img: './assets/reviews/kirti.png',
-    fullName: 'Kirti Malhotra',
-    reviewText: `We booked Cab from Taxi Service Kashmir for a family trip for 7 days starting on 20th June 23. Our driver <strong>Mr. Firdous Ahmed Bhat</strong> was with us for our entire trip. Now what do I say about this gentleman, he was very courteous and very helpful throughout. He really made our trip to Kashmir a memorable one. He was like a family to us and took good care of us. I would highly recommend services of Taxi Service Kashmir to everyone and thanks and Good Wishes to Feroze Bhat.`,
-  },
+
   {
     id: 18,
     img: './assets/reviews/saurabh.png',
@@ -251,16 +256,11 @@ const reviews = [
     I will personally recommend to have tour with him .
     Thank you sir for making our tour memorable and fantastic.`,
   },
-
   {
     id: 19,
-    img: './assets/reviews/praveen.png',
-    fullName: 'Praveen Pahwa',
-    reviewText: `Had Nice experience during My Seven days of Family tour of Srinagar.
-    <strong>Mr. Feroz</strong> ji is nice person and is professional in the the services.
-    The Car was neat and clean and well maintained.
-    Our tour driver <strong>Mr Irfan</strong> is also Good person., He was quite informative and was very friendly with kids.
-    Will love to travel with them if I visit again in Kashmir.`,
+    img: './assets/reviews/kirti.png',
+    fullName: 'Kirti Malhotra',
+    reviewText: `We booked Cab from Taxi Service Kashmir for a family trip for 7 days starting on 20th June 23. Our driver <strong>Mr. Firdous Ahmed Bhat</strong> was with us for our entire trip. Now what do I say about this gentleman, he was very courteous and very helpful throughout. He really made our trip to Kashmir a memorable one. He was like a family to us and took good care of us. I would highly recommend services of Taxi Service Kashmir to everyone and thanks and Good Wishes to Feroze Bhat.`,
   },
   {
     id: 20,
