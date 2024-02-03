@@ -611,7 +611,7 @@ bookBtns.forEach(btn => {
 });
 
 AOS.init({
-  duration: 800,
+  duration: 600,
   once: true,
   useClassNames: true,
   offset: 100,

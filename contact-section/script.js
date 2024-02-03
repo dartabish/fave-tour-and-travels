@@ -81,7 +81,7 @@ document.getElementById('contact-form').addEventListener('submit', e => {
 });
 
 AOS.init({
-  duration: 800,
+  duration: 600,
   once: true,
   useClassNames: true,
   offset: 100,
