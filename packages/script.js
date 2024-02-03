@@ -420,10 +420,52 @@ const tourPackages = [
 
 const packageCardsContainer = document.querySelector('.package-card-container');
 tourPackages.forEach(tourPackage => {
-  const packageCard = document.createElement('div');
+  const packageCard = document.createElement('article');
   packageCard.className = 'package-card';
   packageCard.id = tourPackage.id;
-  packageCard.innerHTML = `
+
+  let innerHTMLContent;
+  if (tourPackage.id === 9) {
+    packageCard.className = 'package-card custom-package-card align-self-start';
+    innerHTMLContent = `
+        <div class="package-card-banner">
+          <img src="${tourPackage.img}" alt="${tourPackage.title}" />
+        </div>
+        <div class="custom-package-details p-3">
+            <h4 class="">${tourPackage.title}</h4>
+        </div>
+        <ul
+            class="package-card-amenities d-flex justify-content-around pt-2 pb-2"
+          >
+            <li>
+              <div class="package-card-amenities-icon" title="Meals">
+                <i class="fa-solid fa-cutlery" aria-label="Meals"></i>
+              </div>
+            </li>
+            <li>
+              <div
+                class="package-card-amenities-icon"
+                title="3 & 4 Star Hotels"
+              >
+                <i class="fa-solid fa-hotel" aria-label="3 & 4 Star Hotels"></i>
+              </div>
+            </li>
+            <li>
+              <div class="package-card-amenities-icon" title="Transportation">
+                <i class="fa-solid fa-cab"  aria-label="Cabs/Transportation"></i>
+              </div>
+            </li>
+          </ul>
+          <div
+            class="package-card-booking ps-3 pe-3 pt-3 d-flex justify-content-center"
+          >
+            <button class="book-package w-100" id="book-button-${tourPackage.id}">
+              Book Now
+            </button>
+          </div>
+    `;
+  } else {
+    innerHTMLContent = `
         <div class="package-card-banner">
           <img src="${tourPackage.img}" alt="${tourPackage.title}" />
         </div>
@@ -452,7 +494,7 @@ tourPackages.forEach(tourPackage => {
           >
             <li>
               <div class="package-card-amenities-icon" title="Meals">
-                <i class="fa-solid fa-cutlery"></i>
+                <i class="fa-solid fa-cutlery" aria-label="Meals"></i>
               </div>
             </li>
             <li>
@@ -460,12 +502,12 @@ tourPackages.forEach(tourPackage => {
                 class="package-card-amenities-icon"
                 title="3 & 4 Star Hotels"
               >
-                <i class="fa-solid fa-hotel"></i>
+                <i class="fa-solid fa-hotel" aria-label="3 & 4 Star Hotels"></i>
               </div>
             </li>
             <li>
               <div class="package-card-amenities-icon" title="Transportation">
-                <i class="fa-solid fa-cab"></i>
+                <i class="fa-solid fa-cab"  aria-label="Cabs/Transportation"></i>
               </div>
             </li>
           </ul>
@@ -513,15 +555,19 @@ tourPackages.forEach(tourPackage => {
           </div>
 
           <div
-            class="package-card-booking ps-3 pe-3 d-flex justify-content-center"
+            class="package-card-booking ps-3 pe-3 pb-2 d-flex justify-content-center"
           >
-            <button class="book-package w-100" id="${tourPackage.id}">
+            <button class="book-package w-100" id="book-button-${
+              tourPackage.id
+            }">
               Book Now
             </button>
           </div>
         </div>
    
   `;
+  }
+  packageCard.innerHTML = innerHTMLContent;
   packageCardsContainer.appendChild(packageCard);
 });
 

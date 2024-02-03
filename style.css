@@ -12,6 +12,11 @@
   --bg-primary: darkslategray;
   --swiper-theme-color: white !important;
   --hover-accent: #3a5f5f;
+  .swiper-pagination-bullet {
+    background-color: var(--bg-primary);
+    width: 10px;
+    height: 10px;
+  }
 }
 
 * {
@@ -96,7 +101,7 @@ body {
   position: fixed;
   top: 85%;
   right: 15px;
-  z-index: 9999;
+  z-index: 3;
   border: none;
   outline: none;
   background-color: #25d366;
@@ -259,6 +264,10 @@ body {
 
   .about-text-container {
     max-width: 50%;
+  }
+
+  .reviews-swiper {
+    height: 250px !important;
   }
 }
 
@@ -470,7 +479,6 @@ body {
   width: 100%;
 }
 
-/* Updated class names for the three cards */
 .card-services-one,
 .card-services-two,
 .card-services-three {
@@ -480,7 +488,6 @@ body {
   max-width: 370px !important;
 }
 
-/* Updated class names for h3 and p tags within the three cards */
 .card-services-one h3,
 .card-services-two h3,
 .card-services-three h3 {
@@ -543,37 +550,38 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 24px;
   font-size: 18px;
   background-color: var(--bg-accent);
-  padding: 10px;
+  padding: 10px 14px;
 }
 
 .review-text {
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 16px;
+  padding: 10px 5px;
   font-size: 15px;
-  line-height: 2;
-  color: #f0f9ff;
-  background-color: var(--bg-primary);
+  line-height: 1.8;
+  color: var(--bg-primary);
   height: 100%;
   overflow: auto;
-  display: flex;
   margin-bottom: 4px;
 }
 
+.reviews-pagination {
+}
+
 .reviewer-profile {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: 20px;
 }
 
 .picture {
   width: 70px;
   height: 70px;
-  /* border: 10px solid #083149; */
   border-radius: 50%;
-  /* display: flex; */
 }
 
 .picture img {
