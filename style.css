@@ -10,13 +10,8 @@
   --bg-subtext: rgb(59, 114, 114);
   --bg-accent: rgba(23, 187, 187, 0.169);
   --bg-primary: darkslategray;
-  --swiper-theme-color: white !important;
+  --swiper-theme-color: darkslategray !important;
   --hover-accent: #3a5f5f;
-  .swiper-pagination-bullet {
-    background-color: var(--bg-primary);
-    width: 10px;
-    height: 10px;
-  }
 }
 
 * {
@@ -118,7 +113,7 @@ body {
 /* Hero Section------  -----Hero Section----------------Hero Section-------------Hero Section---------------------- */
 .hero {
   position: relative;
-  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -326,10 +321,6 @@ body {
   object-fit: cover;
 }
 
-.swiper-pagination-progressbar-fill {
-  background-color: darkslategray !important;
-}
-
 /* Special Offers */
 .special-offers {
   height: 60vh;
@@ -345,7 +336,6 @@ body {
   background-image: url('https://images.unsplash.com/photo-1637558929744-024c00b06075?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-position: center;
   background-size: cover;
-  position: relative;
 }
 
 .offer-container:after {
@@ -367,24 +357,10 @@ body {
   background: hsla(33, 100%, 53%, 1);
 
   background: linear-gradient(
-    180deg,
+    90deg,
     hsla(33, 100%, 53%, 1) 0%,
     hsla(58, 100%, 68%, 1) 100%
   );
-
-  background: -moz-linear-gradient(
-    180deg,
-    hsla(33, 100%, 53%, 1) 0%,
-    hsla(58, 100%, 68%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    180deg,
-    hsla(33, 100%, 53%, 1) 0%,
-    hsla(58, 100%, 68%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ff930f", endColorstr="#fff95b", GradientType=1 );
   padding: 1rem 0;
   margin-bottom: 1rem;
 }
@@ -533,10 +509,6 @@ body {
   object-fit: cover;
 }
 
-.swiper-pagination-bullet {
-  color: var(--bg-primary) !important;
-}
-
 /* ----------------------------------TESTMONIAL SECTION-------------------------- */
 /* Reviews */
 
@@ -552,16 +524,15 @@ body {
   text-align: center;
   border-radius: 24px;
   font-size: 18px;
-  background-color: var(--bg-accent);
+  background-color: rgba(23, 187, 187, 0.169);
   padding: 10px 14px;
 }
 
 .review-text {
   border-radius: 16px;
   padding: 10px 5px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
-  color: var(--bg-primary);
   height: 100%;
   overflow: auto;
   margin-bottom: 4px;
