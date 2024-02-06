@@ -613,7 +613,6 @@ bookBtns.forEach(btn => {
 
 AOS.init({
   duration: 600,
-  once: true,
   offset: 100,
   easing: 'ease-in',
 });

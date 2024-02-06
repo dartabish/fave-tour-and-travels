@@ -277,8 +277,7 @@ carsContainer.addEventListener('submit', function (event) {
 });
 
 AOS.init({
-  duration: 700,
-  once: true,
+  duration: 600,
   offset: 100,
   easing: 'ease-in',
 });
