@@ -575,32 +575,33 @@ const bookBtns = document.querySelectorAll('.book-package');
 bookBtns.forEach(btn => {
   btn.addEventListener('click', e => {
     let selectedPackage;
+    console.log(e.target.id);
     switch (e.target.id) {
-      case '1':
+      case 'book-button-1':
         selectedPackage = tourPackages[0].title;
         break;
-      case '2':
+      case 'book-button-2':
         selectedPackage = tourPackages[1].title;
         break;
-      case '3':
+      case 'book-button-3':
         selectedPackage = tourPackages[2].title;
         break;
-      case '4':
+      case 'book-button-4':
         selectedPackage = tourPackages[3].title;
         break;
-      case '5':
+      case 'book-button-5':
         selectedPackage = tourPackages[4].title;
         break;
-      case '6':
+      case 'book-button-6':
         selectedPackage = tourPackages[5].title;
         break;
-      case '7':
+      case 'book-button-7':
         selectedPackage = tourPackages[6].title;
         break;
-      case '8':
+      case 'book-button-8':
         selectedPackage = tourPackages[7].title;
         break;
-      case '9':
+      case 'book-button-9':
         selectedPackage = tourPackages[8].title;
         break;
     }
